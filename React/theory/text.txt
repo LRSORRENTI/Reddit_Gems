@@ -1,0 +1,256 @@
+
+===================================================
+QUESTION
+==========================================================================
+
+React Senior vs Junior Codebases
+
+Discussion
+
+I am curious and I hope I’ll learn a thing or
+ two from your answers.
+
+Question: You are reading React code, what are the
+ things that you notice that would make you go
+  “this was written by a junior” vs “this is 
+  really well written must have been written by a solid senior”?
+
+Edit: The terms Senior and Junior are debatable 
+and I understand that. So let’s add some context.
+ Say you’re a CTO and you’re reading React code
+  written by an applicant to a Senior Dev position on your team.
+   What are the indicators “code only” that tells you whether
+    they’re ready for that position or not.
+
+Also its very useful if you can point a specific examples 
+like the use of a difficult hook or the way to organize
+ code/stores/events whatever
+
+==================================================================================
+user DemiPixel ANSWER:
+ ==========================================================================
+ 
+ Honestly, just proper usage of all the tools available
+ in React. Are components massive or small groups of code? 
+ Are we using state correctly or are we using a bunch of hacks?
+  Are we writing our own hooks or letting the logical parts of 
+  functional components go on forever?
+
+The other tell would simply be whether the code is 
+written well, but that's not React-specific.
+
+===================================================================
+user damondefault answer:
+======================================================
+Usually the junior will just be happy 
+that they got things to work. There will be a
+ lack of structure in the junior's codebase, no containers,
+  just components, global and local state mixed together.
+
+   No separation of core state and presentation state. Lots 
+   of little conditionals everywhere to plaster over the 
+   cracks where things aren't working properly.
+   
+    I often see comments laughingly saying that this code fixes some weird 
+problem that's impossible to work out. But it's not hard 
+   to work out, it's usually just a bit of a tangle and just needs 
+   to be cleaned up and sorted out.
+   
+    The junior won't have unit tests or at least won't have any good ones,
+    just a bunch of things that were easy to test and they
+     will just test that the code does what it does rather
+      than making statements about important behaviour in 
+      the app.
+      
+       Juniors tend not to be aware of the various 
+      tools and patterns available so they'll have built weird 
+      parts of the app themselves where there are libraries
+       that already do the same thing.
+       
+     The lack of tests and structure means refactoring becomes hard so there's
+        copy and pasted things around that you wouldn't expect, 
+        different parts of the codebase do things in weirdly
+         different and inconsistent ways. Type definitions are loose,
+          ignored or overridden because they couldn't be bothered
+          to work out the types. A lot of good hygiene principles 
+          will be ignored, for example they'll use a string as a display 
+          value but then they'll also use it as a truthy/falsy conditional
+           to decide some semi related thing. Like, if title field is 
+           undefined then we should show the user settings icon.
+            Just happy they got it to work.
+
+If it's a good codebase written by an experienced and 
+talented dev you'll see a neat structure of build tools, 
+core application, modules for features, etc. 
+Tests alongside code, good error boundaries, 
+isolation of components and features, well written
+ API clients with good error handling.
+ 
+  Things will be well named and have single concerns. It will 
+  seem verbose and obtuse to a junior but that's
+   because they can't yet tell the difference
+    between long simple code and short complicated code.
+
+I could go on I guess. Let me know if it makes sense.
+
+  ==========================
+  reply to damondefault
+  ========================
+
+  My seniors in my current company want me to write nothing but e2e tests via Cypress because they find 
+  unit tests to be either situational or worthless..
+
+  ===================================
+  damondefault reply:
+  =================================
+  That approach doesn't really work once you get beyond a 
+  certain size, e2e tests are slow, no matter how you
+   split them into groups it's going to be a lot of 
+   overhead to maintain and run them.
+   
+    If, say, I wrote a set of base functions for an API client I'd like to have
+     unit tests for valid responses, 4xx, 5xx, invalid response,
+      connection failed and couldn't resolve hostname errors. 
+
+
+      I wouldn't really want to test every one of those cases
+       by getting an API to send them. But a set of unit tests
+        for those things would be great.
+         
+         Likewise if I had a currency converter I wouldn't want to test 100 combos
+         with tests that render the front end.
+
+But, if you want to make a case against it you need to understand 
+their reasoning first. Much as you might suspect that it's because
+ they just don't like the hassle of mocking everything or the 
+ test setup, they must have reasons such as the e2e tests are
+  fast enough for all cases.
+  
+   Perhaps pointing out some cases
+   where the e2e tests haven't caught things, or have been 
+   slow to implement or run might be good but you need to
+    start with "the current approach is fine but I think we
+     can do better in a lot of cases" rather than "you people 
+     are dumb but I'm too junior to have a voice". Best of luck!
+
+     =================================================================
+     remejuan:
+     ===========================================================4
+
+     Based on your edit, code would be the last thing I’d look at to 
+     determine readiness for progression.
+
+Like the quality of your code won’t necessarily improve 
+that much from what would be considered an intermediate.
+
+Those who truly earn the senior classification 
+have expanded their skills beyond the codebase, 
+they show leadership and mentoring capabilities, 
+they are more capable with problem solving and have
+ learned to spot the problems in a solution,
+  they able to solve problems before they happen. 
+  They’ll have better understanding of architectural practices.
+
+I think one of the probable biggest code changes you’ll find in a 
+senior code, more tests, and tests covering all relevant scenarios.
+ Tests that add value to the product and don’t exist for the purpose
+  of code coverage, they won’t consider a feature done, until the
+   unit tests are done, regardless of how well it may function in
+    practice.
+
+Another practice you may find, that when fixing a bug in a section
+ of code that’s untested, they’d ensure that all the code is
+  tested and even go as far as rewriting it, if it’s not in a 
+  testable state.
+
+Beyond that, your biggest differences are outside of code.
+
+=============================================
+OP:
+==========================================
+
+Is that typical of corporate? I work in startups 
+and while our Rust web server and the backend is fully tested,
+ the Frontend has 0 tests and
+ the word from seniors/cto is that UI testing brings zero value.
+
+ ==============================================================
+ remejuan re:
+ ==============================================================
+
+It can be, it really is a culture thing.
+
+I have worked at corps and non-corporate environments 
+and on both sides of the fence you’ll find companies
+ that believe in tests and companies that don’t.
+
+I contracted in for a company where the CTO believed linters
+ and code standard where a waste of time, I looked at his code 
+ and quite frankly it was the worst in the lot. That is a 
+ CTO who should be banned from the codebase.
+
+To a degree, I can agree with the wording of that statement,
+
+ UO testing does not technically add value, 
+ however that is ignoring the fact that in this day and age,
+  businesses logic exists in the UI, and it’s near impossible
+   to keep a solid separation between the 2.
+
+I do consider UI testing of secondary importance over the 
+actually separated business logic, but the exception
+ is when the UI contains logic, be it some form of 
+ business logic that needs to exist, or UI logic in 
+ the case of a reusable widget that is “configurable”.
+
+Like if there is a hardcoded button as a component,
+ I could care less if you wrote a test for it, 
+ it will indirectly be tested in the widget it’s
+  implemented into, again assuming that justifies testing.
+
+That is why, I certainly use test coverage reports,
+ but they are not the true measure of testing, they a 
+ sanity check to validate that your tested all code
+  cases of the logic.
+
+Quite frankly if they believe it adds no value, 
+then I also assume all the code is perfect and you never
+ experience any bugs. Cause then sure, if the codes perfect,
+  there’s never any hugs, then why waste time testing it.
+   Why verify perfection
+
+   ====================================================
+   saulty_cluck re:
+   =========================================
+   Joking answer: If it's one component that somehow manages to use Redux,
+    it's probably written by a junior.
+
+Serious answer: Can I read the code and understand exactly what's
+ going on without tons of comments in it? Is it unit tested? Is
+  there a lot of code needlessly repeated? Does the dev use the same tool/practice 
+to solve every single problem? (Hammer/nail problem)`
+
+=====================================================================================
+OP re:
+===============================================================
+
+I honestly believe frontend logic is much harder to grasp than
+ Rust and backend stuff. Simply because the Rust
+  compiler won’t let you write stuff that don’t
+   work and teach you how to fix it. Also API 
+   endpoints tend to be very streamlined. 
+   You can’t like.. break another route by 
+   changing the one you’re currently working on.
+
+React on the other ends has hundreds of not
+ thousands of never-explained intricacies 
+ and methods/hooks/optimizations and will
+  always run regardless of your code being good. 
+  That leads to unoptimized parts and unseen bugs
+   all the time for me. I feel like I literally 
+   need to have every single line of the client
+    memorized in order to detect whether what 
+    I’m doing in gonna break something else or
+     won’t render properly or will break only 
+     on a certain type of event listener.
+
+That’s my hot take. React is harder than Rust
