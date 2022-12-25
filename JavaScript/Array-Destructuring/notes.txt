@@ -1,0 +1,89 @@
+What is the time complexity of array de-structuring?
+
+I was wondering what is the time complexity of using spread with an array in JavaScript. Is it linear O(n) or constant O(1)?
+
+Example of syntax below:
+
+let lar = Math.max(...nums)
+
+====================================================================================
+
+
+===================================================================================
+
+
+With de-structuring, for example, this:
+
+const [a, b] = array;
+You are implicitly specifying the index, 
+starting from zero and following the order 
+of each new variable you define (a, b and so on) 
+so this should be O(1) or constant time. Source.
+
+On the other hand if you do:
+
+const [a, b, ...rest] = array;
+The ...rest part (spread syntax) will have to loop 
+through the rest of array to extract each element 
+and put it in rest, so this will be O(n), 
+with n being the number of remaining element
+
+==========================================================================================================
+
+Spread calls the [Symbol.iterator] property on the 
+object in question. For arrays, this will iterate through
+ every item in the array, calling the array iterator's .next() until the iterator is exhausted, resulting in complexity of O(N).
+
+For the exact same reason, for..of (which also calls [Symbol.iterator]) loops are also O(N):
+
+const arr = [1, 2, 3];
+for (const item of arr) {
+  console.log(item);
+}
+Expand snippet
+For a live example, see how the following snippet takes some time to execute:
+
+const arr = new Array(3e7).fill(null);
+const t0 = performance.now();
+const arr2 = [...arr];
+console.log(performance.now() - t0);
+Expand snippet
+(if the operation was O(1), it'd be near instantaneous, but it isn't)
+
+Argument spread is different from array spread, but it uses the same operation (iterates through the iterable until it's exhausted), and so has the same complexity.
+
+For function calls:
+
+myFunction(...iterableObj);
+
+
+Source: https://stackoverflow.com/questions/57032373/whats-the-time-complexity-of-javascript-spread-syntax-in-arrays
+
+
+
+==============================================================================================
+
+This is a good answer. If it helps, 
+I would add that you can think of destructuring 
+as equivalent to older patterns in terms of performance.
+
+For example, the first simple example u/turn_right_from_here posted
+ is equivalent to these two lines:
+
+const a = array[0];
+const b = array[1];
+Written this way, it should be fairly clearly constant time.
+
+The rest example would be equivalent to this:
+
+const a = array[0];
+const b = array[1];
+const rest = array.slice(2);
+Although it is not necessarily as obvious, 
+slice has O(n) complexity (like many array methods). 
+It must iterate through the remainder of the array in 
+order to build the new one.
+
+So as a general rule, any time you are destructuring you 
+are doing O(1) index/key lookup, but any time you see ... 
+you are doing some sort of o(n) operation.
