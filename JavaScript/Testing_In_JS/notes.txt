@@ -1,0 +1,40 @@
+
+Hey everyone. I'm a junior front end developer 
+and I feel I'm getting very close to being job ready.
+
+While looking at job descriptions I've realized
+ that one of the only things I'm missing is the ability
+  to test my code. I need to learn some sort of testing
+   framework such as Jest.
+
+What would be the best way to get started with this?
+ Should I dive straight into Jest or should I first
+  take a fundamentals course on testing in Javascript? 
+  Any help would be greatly appreciated!
+
+
+
+*Just to clarify, my knowledge of testing is 0*
+
+
+=====================================================================
+
+Dive in to jest. Create some simple functions and test them:
+
+function adder(n1, n2) {
+  return n1 + n2;
+}
+
+describe('adder', () => {
+  it('adds two numbers', () => {
+    expect(adder(1, 2)).toBe(3);
+  )
+});
+stuff like that (just noticed this is the 
+basic example in their getting started page!). 
+If you have some experience with a framework like React, 
+consider creating a basic app and testing that (if using React,
+ React Testing Library is popular).
+
+Also, my experience is that juniors aren't really expect to
+ know all that much about testing. You can learn it on the job.
