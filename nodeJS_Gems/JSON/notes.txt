@@ -1,0 +1,39 @@
+
+
+r/node
+13 hours ago
+
+is sending data as JSON.Stringify is against rest principle
+const JSONData = [
+{a:1},
+{b:2}
+]
+
+axios.post("some_resources",{
+data: JSON.Stringify()
+})
+Is sending data in this pattern is against rest principle? if yes why ?
+
+===========================================================================
+
+
+
+12 hr. ago
+Axios converts the data object automatically to JSON before sending request. 
+What you are doing here is sending an object with JSON string as a property value.
+ So that results in request payload having JSON within JSON. I'm quite sure that is 
+ not what you want to do. I believe this is the way to go:
+
+axios.post("some_resources", {
+  data: [{a:1},{b:2}]
+})
+
+
+==============================================================================
+
+REST doesn't enforce specific encoding. You can send JSON, XML, HTML, YAML, plain text, etc.
+
+The most common encoding is JSON.
+
+Axios automatically serializes a JavaScript object to JSON, but other libraries/functions may not do it 
+automatically (e.g. with fetch you have to call JSON.stringify manually)

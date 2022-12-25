@@ -1,0 +1,150 @@
+After years of feeling confident in JS, learning about closures is mindblowing / humbling
+I asked chatGPT about it (I know), and it provided this example:
+
+
+
+
+
+function createCounter() {
+
+let count = 0;
+
+
+
+return {
+
+increment: function() {
+
+count++;
+
+},
+
+getCount: function() {
+
+return count;
+
+}
+
+};
+
+}
+
+
+
+let counter = createCounter();
+
+counter.increment();
+
+console.log(counter.getCount()); // 1
+
+
+
+
+
+Is this a common technique? It seems 
+so wild that we can declare a variable inside a function,
+ then keep access to that variable without being able to access it directly!
+
+
+ ===================================================================================
+
+ Sure, closures are used pretty often, /u/senocular beat me to answer a 
+ thread yesterday and probably in a more digestible way, but I found the fiddle where I was writing my response:
+
+const summer = () => {
+  let sum = 0;
+  return (obj) => ({ ...obj, y: sum += obj.y })
+}
+console.log(arr.map(summer()))
+And especially if you use React.. you get used to a pattern for controlled inputs with handleChange:
+
+function Login() {
+  const [user, setUser] = useState({ username: "", password: "" });
+  const handleChange = (field) => ({ target: { value } }) =>
+    setUser({ ...user, [field]: value });
+  return (
+    <form>
+      <label>Username</label>
+      <input
+        type="text"
+        onChange={handleChange("username")}
+        value={user.username}
+      />
+      <label>Password</label>
+      <input
+        type="password"
+        onChange={handleChange("password")}
+        value={user.password}
+      />
+    </form>
+  );
+}
+Getting into a functional mindset can be tricky especially 
+if you're used to procedural and object-oriented programming.
+
+
+====================================================================
+
+
+Because of the closure. When you run the function createCounter, it returns an
+ object with two methods in it. Now the JavaScript engine knows that the variable
+  count is being used inside the methods, so while returning the object when you called 
+  createCounter, it places everything that those methods need inside a bag-pack along with 
+  the returned object. I am using the word bag pack just to make you understand. This bag pack 
+  just contains a “reference” to the count variable. So, when you call the increment method, the
+   increment method first looks up count inside the method and when it doesn’t find it, it
+    searches in the whole bag pack and 
+finds a reference to it and increments it. Same happens with the getCount method.
+
+
+==========================================================================================
+
+
+
+
+By design, all functions in JavaScript are closures and hold on to the environments (scopes) in which they're created. This basically means scopes don't get destroyed when a function is inside of them for as long as that function lives. While normally you think of a scope and all its variables getting destroyed once execution leaves that scope, because functions can exist and execute code which is effectively still inside that scope after the scope has been left, those scopes would need to persist in order for that function to be able to access variables within them.
+
+let fn;
+{
+  const x = 1
+  fn = () => x + 2
+}
+// out of block scope, but we still need x because fn uses it
+fn() // 3
+The "bag pack" is basically a reference to the scope chain given to the function which keeps those scopes alive so long as its possible for the function to use them. Most JS engines will optimize this scope chain to limit the scopes and variables held on to in order help reduce memory and the possibility of memory leaks. So while you may have a scope like
+
+let fn;
+{
+  const x = 1
+  const y = 0
+  fn = () => x + 2
+}
+When fn captures the block scope as part of the closure, that block scope would only include the x variable, not y. Since the y is not being used and would be unreachable it gets optimized away. However if another function were to use y, then that scope would include y as well.
+
+let fn, fn2;
+{
+  const x = 1
+  const y = 0
+  fn = () => x + 2
+  fn2 = () => y + 3
+}
+At this point both fn and fn2 hold on to the block scope which
+ includes both x and y. Note that they're not holding on to the variables
+  individually allowing fn to only hold on to only x and fn2 to hold on to only y.
+   Because closures hold on to the scopes, both hold on to the same scope in which
+    both x and y need to be present.
+
+One of the downsides of eval() (outside the possibility of running malicious code) 
+is that it can't allow this optimization to occur because the runtime doesn't know what
+ variables in what scopes code executed within the eval will attempt to use. So what it
+  has to do is include them all just in case. Using Function() doesn't have this problem 
+  because it can't capture variables in the current scope, instead always running in global.
+
+let fn;
+{
+  const x = 1
+  const y = 0
+  fn = () => x + eval(code) // must include y in case `code` refers to it
+}
+Also, despite these optimizations, all functions in JavaScript are closures
+ because all functions in JavaScript will hold on to at least the global scope if nothing else.
