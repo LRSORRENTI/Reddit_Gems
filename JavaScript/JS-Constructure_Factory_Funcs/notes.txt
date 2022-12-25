@@ -1,0 +1,39 @@
+Kind of confused with constructors and factory functions..
+Here's what I got until now..
+
+Both ways are done to create a "blueprint" for numerous objects
+ that share some functionality..
+
+The factory function returns a new object, also easier to
+ encapsulate things by simply not returning them but by using 
+ closure they can still be accessed from inside the function..
+
+With constructors you need to use the "new" keyword in the object 
+instantiation, behind the scenes the function creates an object called
+ "this" and returns it with the code you wrote.
+
+In the course I'm doing (The Odin Project), they advise using
+ factory functions over constructors.. Also instead of using inheritance,
+  to use composition.. Which for me is great, because out of all of these, 
+  factory functions + composition is what I understood the most..
+
+Constructors, "this" keyword, prototypes and all that still kind of confuse me..
+
+
+
+I wrote this little code to try and see if I could do something 
+with factory functions and compositions.. Did I do it right or could have it have been better?
+
+https://jsfiddle.net/va35kyrd/
+
+https://codesandbox.io/s/muddy-fast-nc2nfl?file=/src/index.js
+
+
+
+The idea is that player1(p1) has power of flight,
+ p2 has power of invisibility.. Both can attack and heal, 
+ and then p3 is overpowered so he has both powers and more health and healing ability..
+
+I feel like I messed up with p3, passing in the if
+ statement in line 17 could get messy with lots of different players.. 
+ If I set p3 health and healing when I create it, it still uses the default ones of 5 and 3 (line 14).
