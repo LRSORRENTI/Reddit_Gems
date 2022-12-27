@@ -1,2 +1,73 @@
+=================================================
 
  How to parse and create XML with Node.js
+
+ =================================================
+
+Writing and parsing XML files with Node.js
+ might not be one of the first things that 
+ strike your mind. On the contrary, the Fast
+  XML parser has millions of downloads per 
+  week on NPM. In this post, you will learn
+   how to validate and parse XML with Node.js.
+    You will also learn to generate an XML file from 
+JavaScript objects. Let's get started!
+
+====================================================
+
+Is XML still used ???
+
+===================
+
+You might be wondering in this era of
+ JSON and REST is XML still used. In addition, 
+ with newer options to communicate between services 
+ like GraphQL and gRPC the use of XML should have
+  declined significantly in recent years. To your 
+  surprise, having worked for million-dollar 
+  companies I can verify that even business-critical 
+  processes depend on XML and parsing of it. For 
+  example, Microsoft Navision ERP 
+  (now called Business Central) still
+   supports Simple Object Access Protocol
+    (SOAP) web services that communicate using XML.
+
+Let’s assume for an e-commerce website, 
+the customer order is taken from the checkout
+ system built with Node.js and MySQL database.
+  The warehouse, however, is managed with a 
+  Microsoft Business Central ERP (moved from Navision). It is very likely that the orders are sent to the ERP from the web system using SOAP and XML. The cost of rewriting the business critical part is high in terms of writing a new service as well as managing the risk of failure.
+
+In comparison fast-XML-parser NPM package
+ has more downloads/week (6 million) than 
+ Vue (3.4 million) or Angular (3 million).
+
+Thereby XML is used and will be 
+used in the future too
+
+=============================================
+
+To follow along with the example code
+ below for this tutorial, below are 
+ some of the requisites:
+
+- Prior knowledge of JavaScript, NPM, 
+and the Node.js ecosystem will be beneficial. 
+The example will be run with Node.js 18 
+the current LTS version.
+
+- Understanding the difference between 
+common js and es6 modules will be helpful
+
+- Using git and GitHub will be necessary
+
+- Any previous experience working with 
+XML will be advantageous
+Given that is mentioned, you can proceed to
+ get your hands dirty with code now
+
+ ============================================
+
+ Parse simple XML
+
+===============================================
