@@ -1,0 +1,164 @@
+
+==============================================
+
+React developers, how do you (continuously) 
+test component changes without waiting 
+so long for page refresh?
+
+=================================================
+
+
+I'm working on a big React project.
+
+How I work, is make minimal changes, 
+refresh to make sure everything's fine,
+ and then continue to the next step and so on, 
+rather than write long code, 
+and then test it all at once.
+
+The React app is a self-hosted open-source app, 
+and it's kind of a huge app, it usually 
+takes 20-30 seconds to refresh the page.
+
+Is there any trick I might not know of, 
+that can refresh the page quickly, rather
+ than load the whole page again, which takes
+  A LOT of time in my case?
+
+  ==================================================
+
+  Answers:
+  
+  https://storybook.js.org/docs/react/why-storybook
+
+   run DevOps and have had far more urgency 
+   for a fix when our Storybook task for local
+    builds is glitchy than 
+   when our automated test suites/CICD are down.
+
+   =======================================================
+
+A: 
+
+I've built a lot of stuff with Storybook, but 
+lately I've preferred Ladle. Quicker to set up,
+ batteries included, simpler UI. If you know how 
+ to write Storybook stories you already
+ know how it works. Maintained by Uber I think
+
+ LADLE: https://ladle.dev/
+
+ =================================================
+
+ A:
+
+ As others have said, we're not generally dealing with refresh times anywhere near that long.
+
+Either:
+
+1. Your setup needs some serious optimization 
+on the build side (try other tools, etc)
+ 
+Or
+
+2. You should develop your components more in
+ isolation so you aren't refreshing the
+  entire app at once, just the piece of it 
+you need for testing the stuff you are working on.
+
+==========================================================
+
+A:
+
+I have been working on porting a babel plugin to
+ swc and have seen my production build times go 
+ from 13 minutes to less than 1 min, and hot 
+ reload times go from 10-15 
+seconds to less than 1s. It really is 'magic
+
+      A to above comment:
+
+      vite is awesome, but in an older project 
+      using webpack the easier
+       solution is just to use the esbuild-loader 
+       for your js/ts files to acheive 
+       similar build times. it gives you 
+       the best of both worlds as webpack's
+        tooling is arguably more mature than 
+        vites if you need it.
+
+not sure why people are recommending 
+storybook as its webpack 4 based...its slow as 
+f@!$ and requires a lot of jank config to make 
+it faster. storybook has its use case but i'm not
+ really sure why people are recommending that for
+  faster builds. maybe for testing components 
+  individually? i am not sure.
+
+I'd also recommend following
+ https://webpack.js.org/configuration/cache/ 
+ and using the filesystem caching
+
+ ============================================================
+
+ A:
+
+ When I code 1 component I have a 
+ page with only that component
+
+20 seconds for a refresh is ridiculous though
+
+=======================================================\
+
+A: 
+
+Turning off source maps sped up refresh time
+ from roughly 20 seconds to about 2 seconds 
+ for me. I would try that and only 
+turn on the source maps when you need them
+
+========================================================
+
+A (abejfehr)
+
+
+There are tons of things here:
+
+1. disable source maps as much as you can
+
+2. make sure your NODE_ENV isn’t set to 
+production (I did this once and it takes
+ longer to build a production bundle)
+
+3. check out hot module reloading (HMR),
+ or it’s successor react-fast-refresh, 
+ since It sounds like what you have now is 
+ live reloading instead of hot module reloading
+
+4. use cache-loader ahead of any expensive loaders
+
+5. use speed-module-plugin to
+ output where all the time is being
+  spent in webpack
+
+6. use esbuild-loader instead of babel-loader
+ if transpiling it is what’s time consuming,
+  but then you can’t have HMR so it’s a trade off
+
+7. There’s more, but without seeing
+ the webpack config it’s difficult
+  to suggest more. Feel free to DM me 
+  if you’d like to look at it together.
+
+  ===============================================================
+
+  A: 
+
+  The answer is that babel / webpack is very very 
+  slow. I have seen refresh times go down from 15 
+  seconds to less than 1 when swapping out babel 
+  and twin.macro to swc + my custom tailwind 
+  transpiler stailwc. If getting rid of those 
+  is not feasible, then storybook can help relieve
+   your immediate struggles by 
+  allowing you to develop components in isolation.
