@@ -245,7 +245,7 @@ Validate XML using Node.js
 
 Before parsing the XML file or data it
  is better to validate it. For this, 
- you can use the XMLValidator.valudate method
+ you can use the XMLValidator.validate method
   from the Fast XML parser library. It also
    has options like allowBooleanAttributes,
     you can read about it in the documentation.
@@ -259,3 +259,231 @@ For this guide, you will use it without
       the error. Below is the code to validate a
        sample XML file similar
  to the one mentioned in the previous section
+
+ ======================================
+
+ import { XMLValidator } from 'fast-xml-parser';
+
+const xmlFile = `<?xml version="1.0"?>
+<catalog>
+   <book id="bk101">
+      <author>Gambardella, Matthew</author>
+      <title>XML Developer's Guide</title>
+      <genre>Computer</genre>
+      <price>44.95</price>
+      <publish_date>2000-10-01</publish_date>
+      <description>An in-depth look at creating applications 
+      with XML.</description>
+   </BOOK>   
+</catalog>`;
+
+const result = XMLValidator.validate(xmlFile);
+if (result === true) {
+  console.log(`XML file is valid`, result);
+}
+
+if (result.err) {
+  console.log(`XML is invalid becuause of - ${result.err.msg}`, result);
+}
+
+You will save the above file as xml-validate.js.
+ It starts by importing the XMLValidate object 
+ for the Fast XML parser library. After that, 
+ you define an XML string named xmlFile which is
+  not valid. The opening tag 
+is book in all small letters but the closing
+ tag is BOOK in all caps. This should be picked
+  up by the validator.
+
+Next, you run the invalid XML string 
+(could be a file too) through the 
+XMLValidator.validate method, the
+ result of this operation is put in 
+ the result constant. Then you check 
+ if the result is true, and the XML 
+ is valid. If there is result.err 
+ present then there is an issue 
+ and you do a console.log to show 
+ the error to the user. You can run this file with:
+
+ node xml-validate.js
+
+ It will result in an output like the below:
+
+ (Image inside of XML FOLDER, file starts with' 02nodejsxml-val....jpg)
+
+ In the consequent section, you will learn about parsing the 
+ XML file (or string) into a JavaSciprt object 
+ using XMLParser from the Fast XML parser library
+
+ ===========================================================================
+
+ Parse XML with Node.js
+
+ =========================
+
+ You have already looked at the sample XML file 
+ at ./xml/books.xml. It has a list of 12 books. Next, 
+ you are going to parse that file into a JavaScript object
+  and print the contents of the 
+ first book object. It can be done with the following code:
+
+ import { XMLParser } from 'fast-xml-parser';
+import { readFileSync } from 'fs';
+
+//xml file from https://learn.microsoft.com/en-us/previous-versions/windows/desktop/ms762271(v=vs.85)
+const xmlFile = readFileSync(`${process.cwd()}/xml/books.xml`, 'utf8');
+const parser = new XMLParser();
+const json = parser.parse(xmlFile);
+
+console.log(`First book: `, json.catalog.book[0]);
+
+This example starts by importing the XMLParser class from the
+ Fast XML Parser library. 
+Then it also imports the readFileSync function from the 
+native file system (fs) module. The file system module is
+ used to read data from file using Node.js.
+
+Next, you load the whole file on a const called xmlFile
+ with readFileSync. The file is located in the current
+  directory /xml/books.xml. This is the sample file discussed
+   previously in this tutorial. It will be loaded with utf8 
+   encoding. After that, you instantiate the parser the call
+    the parse method on the parser passing the contents of 
+    the XML file. Here the parser will run the validator 
+    first then do the parsing.
+
+After the parsing is successful you log the first book,
+ which will look like the following on 
+ running with node xml-parse.js:
+
+ (image is: '03nodejs-xml-parse.jpg) located inside this folder
+
+ Great! You have passed the XML file into a JavaScript object. 
+ As per the need, you can loop through the books array or do
+  the task that you want to accomplish. Next, you will learn
+  how to create XML data from a JavaScript object.
+
+  ================================================================
+
+  Create XML using Fast XML parser
+
+  ==================================
+
+  You have translated (parsed) the XML file’s contents to a 
+  JavaScript object with mapped attributes. Similarly, you can 
+  also convert a JavaScript object into an XML file (or data)
+   using the Fast XML parser package. You can convert
+   a JavaScript object/array into XML with the following code:
+
+   import { XMLBuilder } from 'fast-xml-parser';
+
+const books = [
+  {
+    author: 'Gambardella, Matthew',
+    title: "XML Developer's Guide",
+    genre: 'Computer',
+    price: 44.95,
+    publish_date: '2000-10-01',
+    description: 'An in-depth look at creating applications with XML.'
+  },
+  {
+    author: 'Ralls, Kim',
+    title: 'Midnight Rain',
+    genre: 'Fantasy',
+    price: 5.95,
+    publish_date: '2000-12-16',
+    description: 'A former architect battles corporate zombies, \n' +
+      '      an evil sorceress, and her own childhood to become queen \n' +
+      '      of the world.'
+  }
+];
+
+const builder = new XMLBuilder({
+  arrayNodeName: "book"
+});
+const xmlContent = `<?xml version="1.0"?>
+<catalog>
+  ${builder.build(books)}
+</catalog>`
+
+console.log(`xml: `, xmlContent.substring(0, 118));
+
+This code snippet starts with importing XMLBuilder from the 
+Fast XML parser library. Then you define a couple of 
+book objects in the books array. After that, you 
+instantiate the XMLBuilder class with an options 
+object having the arrayNodeName property set as book.
+ You can read more about the options available 
+for the XMLBuilder in the docs.
+
+Consequently, you define a const named xmlContent which 
+is going to have the built XML. To make it valid you add 
+the XML tag and the catalog tag by hand. Then you call 
+the builder.build method passing the books array defined 
+earlier. Finally, you log the first 118 characters of the
+ XML content. You can run this code snipped by executing 
+ node xml-build.js 
+which is show the following output:
+
+( 04nodejs-xml-build.jpg )
+
+You can find all the code shown in the examples
+ in this Github repository
+ 
+ https://github.com/geshan/nodejs-xml
+
+  for your reference. 
+ In this tutorial, you have converted XML to JSON 
+ and JavaScript objects to XML using the Fast XML parser 
+ library. Next up, you will learn about other
+ options to do the same task and their popularity.
+
+=====================================================
+
+ Comparing with other libraries
+
+===================
+
+You used the fast-xml-parser library to wrangle the 
+XML and JavaScript objects. There are other options
+ too like XML-JS, XML2Js, XML2Json, etc.
+
+ The most popular one among them in terms of downloads is XML-JS 
+ with 14.7 million downloads per week. For comparison,
+  React has 16.8 million downloads per week.
+
+Below is a quick comparison of the downloads per 
+week from NPM Trends for some XML parsing libraries:
+
+
+img(05nodejs-xml.jpg)
+
+However, for this guide, the Fast XML parser
+ was chosen because it was updated last week 
+ whereas XML2JS was last updated 3 years ago. 
+ It is also used by big companies like Microsoft,
+  NASA, and VMWare to name some. Both will do the job,
+   which library to select will be a matter of choice for you.
+
+
+===============================================
+
+Conclusion
+
+===========
+
+In this tutorial, you learned how to validate 
+XML docs or data. Then you also learned about how
+ to parse XML data into a JavaScript object. After that,
+  you looked at an example to do the conversion the other
+   way round from a JavaScript object (or array of objects)
+    to an XML file.
+
+You might not know it but you would need to work
+ with XML in Node.js, be prepared for it.
+
+================================================
+
+Posted By Geshan Manandhar url(https://geshan.com.np/blog/2022/11/nodejs-xml-parser/)
+
