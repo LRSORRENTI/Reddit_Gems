@@ -1,0 +1,47 @@
+
+
+==========================================================
+
+Closures in javascript, do they have any real application?
+
+==========================================================
+
+A:
+
+ Closures are a huge part of the way the language works. 
+Even if you're not consciously thinking about them 
+you're using them already. 
+There wouldn't be any JS applications without them.
+
+===========================================================
+
+A: 
+
+Have you ever done something like this?
+
+function findUsersByName(name: string) {
+    const users = getUsers() // array of User
+
+    return users.filter(user => user.name === name)
+} 
+
+All functions in JavaScript are closures,
+ it's fundamental to the language. 
+ In this example, the function provided as the
+  argument to filter "closes over" the variable name. 
+  If it wasn't a closure, it would be really annoying 
+  to do operations like this
+
+  =================================================================
+
+  A:
+
+  Memoization, Memoization . . . no r.
+
+Memoizing is when a function returns previously 
+known response when the input data hasn't changed.
+
+So in /u/Tubthumper8 's function up there,
+ if you call that again without changing 
+ the name argument, it will 
+simply return a cached result. a timesaver for heavy functions.
