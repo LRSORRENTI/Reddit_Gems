@@ -1,0 +1,409 @@
+===============================================
+What’s your favorite backend framework and why?
+===============================================
+
+=======
+Answer
+=======
+
+Spring Boot (Java). Hands-down the most intuitive, 
+easy, and all-inclusive framework I've used. Never 
+really tried the Web Flux version, but the standard 
+version is simple to follow and even simpler to add 
+on more endpoints/controllers/services/multithreading to.
+
+Additional, Java is strongly typed so it's super fast
+ to catch errors and know what data shapes you're dealing with. 
+ Plus, the JVM has been optimized continuously for over 3 decades
+  so it runs even the largest of codebases incredibly efficiently. 
+  I'd hate to use anything else for a back-end bigger than like
+   10-15 endpoints/services.
+
+         ===========
+         A to above
+         ===========
+              
+               I also like Java, but the thing is that
+                it has the worst support for out of the 
+                box CRUD/Admin support.
+
+                   With other frameworks you just plug in some lib/package
+                    and you are ready to go
+
+
+========
+Answer 2
+========
+   
+   apollo graphql with express js.
+    Because the docs are good and
+     there are lots of cool features
+
+      ================
+      Answert to above
+      ================
+           
+            I didn’t realise how much I needed Apollo/Graphql 
+            until I tried it. There’s literally no point in
+             global state like redux anymore. Code is so much cleaner.
+
+                Paired also with Prisma and typescript codegen
+                 is a winning combo. It feels magical to
+                  describe types on the backend and then
+                   your frontend also has those types fully defined.
+
+                     ===============
+                     Answer to above
+                     ===============
+
+                    I didn’t realise how much I needed Apollo/Graphql 
+                    until I tried it. There’s literally no point in 
+                    global state like redux anymore. Code is so much 
+                    cleaner.
+
+                          Paired also with Prisma and typescript 
+                          codegen is a winning combo. It feels magical
+                           to describe types on the backend and then 
+                           your frontend also has those types fully 
+                           defined.
+
+                             ===========
+                             Answer T-O
+                             ===========
+                                  
+                                   i've seen people from graphql community have avoided
+                                    using apollo, they rather prefer urql or react query. 
+                                    (yea it supports graphql) any thoughts?
+
+                                    ============
+                                    Answer T-O 
+                                    ============
+                                     
+                                           if i remember it correctly, i think because of caching.
+
+     ===================
+     Random questions
+     ====================
+
+        What’s everyone’s fav Apollo GraphQL hosting solution?
+
+               ===========
+               Answer
+               ===========
+
+                         For me personally, it's Apollo server 
+                         micro running on a Nextjs API route. Really handy    
+
+               ==========
+               Answer
+               ==========
+
+                    this!! I was decided that I just didn’t enjoy
+                     backend development until I used this combo 
+                     at work. definitely changed my mind about
+                      backend development and made it more fun!
+                       turns out I just needed better documentation
+                        so I wouldn’t feel as lost/overwhelmed
+
+========
+Answer
+========
+
+Node.js + Express 4 
+(hopefully Express 5 next year) + AJV (for validation
+
+     =========
+      Answer
+      =======
+         
+          Go doesn't take that long to learn. Just a week at max 
+
+===========
+Answer
+===========
+
+Rails. I've been doing it for 10 years now, and it it by far my 
+favorite. (I have used several other popular backend frameworks 
+prior to this, and have worked in over a dozen other programming
+ languages, both scripted and compiled)
+
+Most of the apps I like to build are DB-backed CRUD-type apps, 
+and Rails happens to be exceptionally good at this. I can maintain
+ a lot of complexity with a small team (sometimes just me!) 
+ and having the test-suite be a first-class citizen makes
+  maintenance and long-term support a lot easier.
+
+When collaborating with others, sticking with 
+Rails conventions means others can onboard into
+ the app a LOT more easily. It took a few years
+  to feel really comfortable with it, but it's
+   been a fantastic toolbox. Plus, writing Ruby
+    is always delightful, and I frequently do
+     scripting and other similar tasks in just Ruby
+
+       ===========
+       Answer T-O
+       ===========
+        
+          As a junior rails dev, I often worry that 
+          I am being spoiled by using it. It’s so
+           enjoyable that I’m afraid to ever switch from it.
+
+             Obviously my experience is limited, but
+              I just love Ruby so much
+
+
+     =============
+     Answer 
+     =============
+
+         What other backend frameworks have you used?
+
+I work in a rails shop now and I low key hate it. I mean parts 
+of it are good, but it basically just feels like a
+ step down from Django in every way. Too much magic...way 
+ too much magic, imo.
+
+I have used quite a lot of frameworks, and rails 
+sits near the bottom, for me, so I'd be interested to
+ hear what you love about it compared to other frameworks.
+
+                 ===========
+                 Answer T-O 
+                 ============
+
+                     Agree until you mentioned django.
+
+                            Not hating, everyone has their cup of tea,
+                             but to me django is a megapita. It's like
+                              if someone designed rails but removed the
+                               emphasis on developer happiness.
+
+===============
+Answer
+===============
+
+Laravel. It's the best developer experience i ever had.
+
+PHP is a very productive language
+ (that comes with costs if you're not careful),
+  the framework ecosystem is huge and the 
+  documentation is nearly perfect.
+
+        =============
+         Answer T-O 
+         ============
+              I love how reddit makes no sense :
+
+                   Ask r/webdev or r/programming what
+                    they think about php : It's a terrible language 
+                    and it's dead anyway
+
+                       Ask r/php what they think about Laravel : 
+                       It's a terrible framework that encourages 
+                       bad practices and you should use Symfony instead 
+
+                         Ask r/webdev what their favorite backend is :
+                          It's PHP with Laravel.
+
+
+   ===========
+   Answer
+   ===========
+
+                As a front end JS dev is it worth learning PHP
+                 and the whole stack just to pick up Laravel?
+
+               It looks sort of awesome. I love working with Vue, 
+                 an opinionated front end framework.
+                  Looks like Laravel is an opinionated
+                   backend framework.
+
+                   But I kinda feel like I'd make a lot more progress
+                    if I switched to a Node framework instead (love JS).
+                     But NestJS looks like more boilerplate complexity
+                      and AdonisJS looks like an almost dead community
+                       with a weaker ecosystem to laravel              
+ 
+         ==========
+         Answer T-O
+         ==========
+          
+           Yes IMO especially if you like Vue. They play well together
+
+              ==========
+              Answer T-O
+              ========== 
+                       
+                        Was gonna look at PHP Practitioner then 
+                        Laravel 8 on Laracasts. Will that 
+                        sufficiently explain backend fundamentals to me?
+
+                           I have no idea about artisan, migrations, 
+                           seeds, all of that. Do I need to know SQL?
+
+                            Can you recommend a Backend fundamentals
+                             course? Or Laravel courses?
+
+                              Was gonna look at PHP Practictioner then 
+                              Laravel 8 on Laracasts. Will that 
+                              sufficiently explain backend 
+                              fundamentals to me?
+                            
+                 ============
+                 Answer T-O 
+                 ============
+                  
+                     Artisan: It's just used to create some boilerplate
+                      files/code easier,
+                      and do some management of laravel. Very easy.
+                       It's just command line.
+
+                      Migrations: You'll 100% want to learn them. 
+                      Versioning your database
+                        and having the changes to it in code is invaluable.
+
+                        Seeds: Not always needed, but nice to have. 
+                        It inserts dummy (but should be real enough) data
+
+                           SQL: If you're not making dynamic sites, no. 
+                           If you are, yes. But that's true of anything.
+
+
+
+                                Just go with Laracasts. It covers everything.
+
+
+                                ==========
+                                Answer T-O 
+                                ==========
+                                   
+                                    Eloquent is Laravel's builtin ORM. 
+                                    Between that (to query and manipulate data) 
+                                    and migrations (to create and alter tables),
+                                     you don't need to use SQL directly (depending on use cases). 
+                                     Eloquent relies on certain relational database concepts though,
+                                      most prominently on the different join types (used in SQL).
+
+                                    For more complex use cases, Eloquent also provides 
+                                    a way to execute raw SQL queries.
+
+            ============
+            Answer
+            ============
+              
+                I recently took a job as a fullstack developer with a
+                 PHP team after many years of frontend JS/TS development.
+
+                     Honestly, I didn't know jack about backend development or PHP. 
+                     After months of various projects using various versions of PHP, 
+                     and wracking my brain, I'm actually starting to get the hang of it.
+
+                       Recently I took on a Laravel project and nearly lost my 
+                       shit when I saw the magic of its dependency 
+                       injection container system and type-hinting.
+                        It is such a beautiful framework and has such a 
+                        rich ecosystem.
+
+                          And if you're one of those people interested in Laravel,
+                           but don't particularly like the idea of PHP development. 
+                           Give it a try. The latest version of PHP, along with using 
+                           best practices, are looking more and more like TypeScript
+                            all the time. It's been a great decision for me and I'm a 
+                            better developer because of it.
+
+             ===========
+             Answer
+             ===========
+
+                  Symfony is pretty easy when you get used to it
+
+
+          ===========
+          Answer
+          ===========
+
+              NestJS🐺 (enterprise) It's battle tested, 
+              has multiple server scheme support. It can be
+               both Regular REST and GraphQL at the same time.
+                Also has batteries for RPC too. Don't forget 
+                about WebSocket support. Compatible with almost
+                 every Node/Express packages too
+
+                  It's testing framework is one of the best I've ever seen.
+                   And the overall server project structure is so straight forward
+
+                      But its dependency injection sucked for many reasons. 
+                      Also not a great fan of Typescript decorators as
+                       these'll be deprecated soon      
+
+
+           ===========
+           Answer
+           ===========
+
+
+             Django... Batteries included.
+
+               It takes mere 15-20 minutes to whip out a application 
+               with crud admin pages included.
+
+                Though, I haven't others listed here, 
+                making me a bit biased probably            
+
+
+                ===========
+                Answer
+                ===========
+                  
+                   ASP.Net. Documentation is amazing and
+                    batteries are included.
+
+                    ===========
+                    Answer T-O 
+                    ===========
+                      
+                        C# and asp.net is heavily influenced by other 
+                        languages and frameworks, which is great. ASP.NET
+                         (Framework, not Core) was pretty much RoR 
+                         (which was popular back then) but with static 
+                         types and compile errors. With ASP.NET Core they
+                          took some inspiration from Express.js but keept 
+                          the MVC part. Now they have Minimal
+                         API which is even more similar to Express.js
+
+                         ===========
+                         Answer T-O 
+                         ===========
+
+                                I just cannot figure out how to do auth 
+                                in .net. Is there a built in solution?
+
+                                ===========
+                                Answer T-O
+                                ===========
+
+                                      Yes. The documentation is very bad though when 
+                                      it comes to authentication. The first step
+                                       is determining which system you want which 
+                                       is already difficult by the confusing naming.
+
+                                      YOU DO NOT NEED Identity Server! You don't 
+                                      need your own OIDC Provider for authentication,
+                                       there are many options without it.
+
+                                       For a SPA app I would recommend using cookie
+                                        authentication and .NET Identity for user management.
+
+                                         Another option is using OIDC with an external 
+                                         provider like auth0 or Azure AD B2C. This is 
+                                         the easiest option but user management is 
+                                         obviously offloaded to an external party.
+
+                                           Learning to set it up for the first time can be
+                                            difficult but people often forget that authentication 
+                                            is a difficult topic. One tip I have is to dig through
+                                             the source code or read blogs which cover 
+                                             the internal workings. This way you'll understand
+                                              how it works and AddAuthentication will no 
+                                              longer be magic 
