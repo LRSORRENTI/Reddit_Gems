@@ -1,0 +1,125 @@
+
+======================================
+What is the order of operations here?
+======================================
+
+=====================================================
+Say I have two HTML elements that each call different
+ JS functions when clicked.
+
+I click element 1, it kicks off process 1.
+
+Then, while process 1 is running, I click element 2, 
+and it kicks off process 2.
+
+What happens to process 1? Does it pause and let
+ 2 begin, and then continues when 2 is done? Does
+  1 have to finish before 2 can begin? Does 1 end
+   immediately so 2 can begin?
+
+Or is the another way entirely to handle this?
+======================================================
+
+====
+1A.
+====
+
+You'll want to read up on the event loop. It's a large topic.
+
+Here's a good link to learn about event loops:
+
+https://www.educative.io/answers/what-is-an-event-loop-in-javascript
+
+The event loop is the secret behind JavaScript’s asynchronous 
+programming. JS executes all operations on a single thread,
+ but using a few smart data structures, it gives us the 
+ illusion of multi-threading. 
+Let’s take a look at what happens on the back-end
+
+The call stack is responsible for keeping track of all the 
+operations in line to be executed. Whenever a
+ function is finished, it is popped from the stack.
+
+ The call stack is responsible for keeping track of 
+ all the operations in line to be executed. Whenever
+  a function is finished,
+  it is popped from the stack.
+
+  Whenever an async function is called, it is sent to a browser API.
+   These are APIs built into the browser. Based on the command
+    received from the call stack, the API starts its own single-threaded
+     operation.
+
+An example of this is the setTimeout method.
+ When a setTimeout operation is processed in the stack,
+  it is sent to the corresponding API which waits till 
+  the specified time to send this operation back in for processing.
+
+Where does it send the operation? The event queue. Hence,
+ we have a cyclic system for running async operations in 
+ JavaScript. The language itself is single-threaded, but
+  the browser APIs act as separate threads.
+
+The event loop facilitates this process; it constantly
+ checks whether or not the call stack is empty. If it 
+ is empty, new functions are added from the event queue. 
+ If it is not, then the current function call is processed
+
+ ==============
+ 2A.
+ ==============
+
+ Javascript runs on a single thread and functions are by 
+ default synchronous, which means that if a function 
+ is processing, it will block all other executions 
+ until it is finished (your website will freeze).
+
+If you want two or more functions to run in parallel,
+ you can use promises to create asynchronous functions.
+
+ ===========
+ 3A.
+ ===========
+ When you click on "element 1"
+  and event goes in the event queue. Since the 
+  event queue it hypothetically empty at this time, 
+  it'll immediately get plucked off and executed. 
+  While it's running, you click on element 2, which
+   puts another event into the event queue - this
+    second event will have to wait until the current task finishes.
+
+In code like the following:
+
+if (obj.attr !== null) {
+  console.log(obj.attr);
+}
+
+This code is non-interrupable. This means, 
+you're never going to have other code
+(coming from a click event, or anything else)
+ that starts executing after you run the "if" 
+ line and before you run the "console.log()" line. 
+ This is important because if this weren't the case, 
+ the interrupting code could technically modify obj.attr
+  to be a different value, causing this to log null when
+   it continues execution, which is explicitly what this 
+   code is not supposed to do.
+
+Contrast this to anything async. Anytime you see an await,
+ or you're using promises, or you're registering further
+  work to be done in a callback, all of this kind of stuff 
+  is interruptible, and is designed to be. When an
+   await is hit, you're basically telling the engine 
+   "I'm done with what I'm doing, go ahead and work 
+   on other stuff, but come back to me when this promise
+    resolves".
+    
+     This means, it is technically possible for
+     the following piece of code to log out a "null", 
+     because the await gives other code a chance to run, 
+     and that other code could update obj.attr to be null.
+
+if (obj.attr !== null) {
+  await forSomething();
+  console.log(obj.attr);
+}
