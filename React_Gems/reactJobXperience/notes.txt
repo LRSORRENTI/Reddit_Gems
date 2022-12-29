@@ -1,0 +1,243 @@
+Posted by
+u/Classic_Panda_5502
+
+
+===========
+Question
+============
+
+===================================================================
+Feeling overwhelmed in my second React role. Advice appreciated
+===================================================================
+
+I’m a self taught dev and I landed my first React contract 
+about a year ago. I still consider myself a junior. 
+I started looking in October because my contract was 
+coming to an end and found a job fairly quickly.
+
+My new company started to develop a React version 
+of their mobile app almost two years ago. It seems 
+like they outsourced the project to a contractor 
+firm based abroad and didn’t have a senior react 
+dev to manage the contractors. About 5 months ago,
+ after firing the second batch of underperforming 
+ devs from the contractor, my company realised the 
+ work done is sub par and also doesn’t use much 
+ Typescript either as specified. They are working 
+ to bring in local dev(s?) onboard which is 
+ why they hired me.
+
+I knew the lack of implementation of typescript 
+and the need to rewrite a lot of the code from my interview. 
+But I’ve found that the contractor (with 4-5 devs ) is
+ still working on the codebase for at least another five months, 
+ and also they are still not required to do pull requests.
+  Some of their work could do with a code review. 
+  It may be my dunning Kruger speaking but I
+   believe they are mostly junior React devs skill wise.
+
+The situation is I’m still onboarding, 
+and I can’t plan/review the work of 4 devs even 
+if I weren’t. We have one senior dev on the project since Oct,
+ but he is a full stack, typescript specialist, rather
+  than react specialist. Half of his time is on the backend work.
+   I’m under pressure to develop features based on the most
+    horrible spaghetti, anti typescript/ anti pattern code 
+    I’ve never been able to imagine.
+
+I’ve raised my concerns regarding code quality
+ and the senior dev emailed management about needing
+  PRs before merging features into release branch, 
+  but I saw no changes in processes. CTO and project manager
+   knows the code is bad.
+
+I’ve succeeded to get them to use MUI as a UI library 
+instead of coding their own , so late in the development cycle, 
+installed Eslint etc, but I’m annoyed each time I see bad code. 
+I see the contractors, unmanaged, continue to add to the chaos.
+ Deadlines drive their work. I can’t blame them
+  entirely because I see they lack support.
+
+I want to take ownership but I can’t, and even I struggle
+ with getting support from a senior.
+
+What can I do. I feel burnt out after one month! Fml.
+ Should I quit ?
+
+Edit: All devs experience stress. Am I being melodramatic?
+ Is this process/feelings to be expected when coming
+  into a new codebase?
+
+  ===============
+  Answers
+  ===============
+
+=====
+  1.
+=====
+You can prevent pushes to the main brach and require PRs
+ in the repo configuration: https://stackoverflow.com/a/57685576
+
+I would start a new repo and slowly work to rewrite
+ & migrate the contractor code over. That way the new 
+ repo becomes the gold standard, and nothing that isn't
+  PR'd/reviewed gets in. This approach also
+ makes it look like you wrote the entire codebase 😛
+
+Obviously your company struggles with leadership,
+ and since you're already considering quitting this seems 
+ like a risk-free opportunity to develop your own managerial skills.
+  If your higher-ups don't like your methods, then they'll
+   get rid of you and you're free to move on. If they like
+    your approach then you'll have proven yourself a creative 
+    and effective leader and set yourself up for promotion. Win-win.
+
+As for burn out, it sounds like the chaos is the driving factor. 
+Don't sweat what you can't control. Contribute what you can,
+ where you can, but the whole thing was a shit show before
+  you got there so don't feel bad that you haven't fixed it 
+  all in your first month!!
+
+  ==============
+  OP reply to 1.
+  ==============
+  Thank you for your advice. I fear I can’t
+   unilaterally request PRs because we lack 
+   the resources to review them. And we got xyz 
+   deliverables we need to hit etc. 
+   
+   But the contractors
+    can’t improve without PRs. And I can’t improve without
+     senior react devs either. 
+     
+     I appreciate your words about needing control. I’m doing some 
+     work over Xmas break because I feel like I’m behind, but I 
+     didn’t expect how much anxiety I suffered 
+     from working during the holidays. 
+  (I don’t resent learning dev outside of office hours).
+
+  ================
+  1. Reply to OP 
+  ================
+  They hired you as what, junior/mid? Heads down work on your tasks 
+  and ignore everyone else, point/score your tasks high, 
+  write as much code from scratch as you can, use this repo a
+   a sandbox to try new stuff and learn a lot, quit when you get
+    something else.
+
+Don't be afraid to disappoint them, the company focus is
+ saving money on cheap labor and exploiting you to build a gazillion 
+ features so they can make more money. You are not their saving grace 
+ so stop holding yourself to that high standard.
+
+And stop working during xmas break before you burn yourself out,
+ you can continue "learning dev" (read: working) next year.
+
+ ==============
+ OP Reply to 1.
+ ==============
+
+ The company hired me as a ‘React developer’ without
+  specifying my level. But I guess the CTO dangled the
+   prospect of me eventually taking over the React codebase one day.
+    Which is why I’m so emotionally invested over the code quality.
+  Thanks for sharing your views. I need boundaries.
+
+========
+2. Reply
+========
+You have to sit down with your team and agree to some quality standards. 
+Then enforce them through the CI pipeline with linting,
+ tests, config (e.g. TS typing strictness), and reviews.
+  Increase coverage requirements with each PR merged. 
+  As the code base becomes more tested you will have
+   a good base to start refactoring from when/if you 
+   take over the project.
+
+Lastly, take this as a learning opportunity. 
+It's easy to work on a high quality codebase.
+ It's hard work to make a bad codebase an example
+  of how things can be turned around.
+
+=============
+  3. Reply
+  ============
+
+  I have worked on projects like this. Yes, 
+  definitely require PR's. It kind of depends 
+  on what your deadline is like. 
+  
+  If it's tight 
+  and they are working in code silos that dont affect
+   the entire app. You just gotta cringe and get things 
+   through if they are functional. 
+   
+   Start making useful 
+   reusable components, say hey I did this and now let's
+    all use it. When PR's come up and its not there hold
+     them hostage haha. Ask your manager that you are alotted
+      time to refactor code, 10-20% of a sprint. Try not to take
+       on all the stress. 
+  Just move forward with our own stuff and improve things as you go.
+
+===========
+  4. Reply
+  ============
+  Sorry about this!
+
+First of all, the company did a mistake at first for not hiring an
+ experienced dev with architectural knowledge for the new project.
+  Not all good programmers are architect and if a new project lacks
+   a good architecture, the rest code will be hell.
+
+So, my suggested solution is; if the codebase hasn’t gone so far,
+ feel free to rearchitect it if you have the experience. 
+ But if it has gone far, nonetheless, Setup and architecture and
+  start following the architecture and gradually move the
+   movement of refactoring to suit the architectural standard.
+
+Feel free to look into my MVP architecture repo if 
+you choose to go with it: https://github.com/emmanuelonah/react-mvp
+
+==========
+5. Reply
+==========
+Try to add git hooks pre-commit with linter and prettier
+ and config these to anything that you want. You can even
+  enforce that everything should have a proper types and
+   follows certain standards. These should run before 
+   commiting any code locally. If someone tries to commit
+    code that doesn't satisfy your linter,
+ it throws an error and doesn't allow the commit to go through
+
+==========
+ 6. Reply
+ ==========
+ Sounds like your first job with a legacy or bad code base. 
+ This is fairly standard for most jobs to be honest. My advice 
+ to you would be to not try to change everything to the way you
+  want it, this creates a scenario where half the codebase is
+   done one way, and half another way. What happens if another 
+   person comes along and wants to do things a different way. 
+   Now you have three styles and strategies going on within the code.
+
+Also regarding MUI, I would be weary of just making massive 
+decisions for a project on a whim like that. Do you understand
+ the long term effects of switching to mui? Does it’s style 
+ paradigm fit the codebase? Making changes like this usually 
+ contributes to the bad code, it doesn’t help it.
+
+All in all it is generally better to stay specific with a 
+single strategy rather than switch to something new unless
+ you realistically have time for a full rewrite into the
+  new method which you more than likely don’t. I would 
+  recommend going along with what they have been doing
+   and making minor improvements where you can. Making 
+   sweeping changes or trying to rewrite everything
+    into a new repo is a trap many Junior engineers 
+    fall into. There is no perfect codebase, every 
+    codebase will look bad after 4-5 years, learning 
+    to manage that and keep the company profitable 
+    is what an experienced engineer does. Pushing 
+    for rewrites and massive overhauls usually solves nothing 
+and just burns cash and engineer hours.

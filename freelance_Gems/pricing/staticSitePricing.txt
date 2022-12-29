@@ -1,0 +1,130 @@
+
+=========================================================
+I'm halfway through a 5 page static site 
+for a telecommunications company, how much do I charge?
+
+https://www.reddit.com/r/webdev/comments/zmjqju/im_halfway_through_a_5_page_static_site_for_a/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=10&utm_content=share_button
+==========================================================
+
+=========
+Answer
+=========
+
+Naw you should charge about 2500. Don’t sell yourself short.
+ If they had a CMS you could charge 3500. It there are really
+  high quality animations and design AND a CMS I’ve easily 
+  charged 7000 in the past. Highest I’ve charged for a marketing 
+  site for a bakery chain was 9800.
+
+Charging too little makes them think you’re not professional 
+or there’s something wrong with the product.
+
+Also when you charge them, give them an invoice with a breakdown.
+
+Something like:
+
+Wire framing and Design: $800
+
+Mobile responsive: $200
+
+Development: $1500
+
+Should do the trick
+
+  =================================
+  Same person responding to comment
+  =================================
+
+If it takes you a couple of hours, then it’s probably not the 
+best quality. My last 5 or so page site took about a week when
+ doing work around color palettes, design decisions, SEO decisions,
+  content review and adjustment, coding the site to make sure 
+  everything is responsive and animations work properly with no
+   performance hit on lower quality devices.
+
+I would be uncomfortable giving a client a website after a
+ couple of hours.
+
+Take the wonder bread marketing site for example even though
+ their mobile site has some small issues here and there. 
+ If you ignore the extra pages for the individual recipes and products,
+  that’s what I’d consider to be a basic website that should cost
+   2500 if not way more. And that’s about 5 pages or so. I wouldn’t
+    feel comfortable giving a client anything less than that.
+
+
+    =================
+    Answer 2.
+    ==================
+
+    never do business without a contract. ESPECIALLY FOR FAMILY.
+
+Figure out your hourly rate. There are many tools out 
+there to help you calculate this. Since you're 
+freelance/self-employed in this case, you're going 
+to be paying taxes on this yourself and not your regular employer.
+
+INVOICE - You need to provide an invoice. Now hear me out.
+ Your family is going to likely ask you to be cheaper
+  than you think, which means you're now in between a 
+  rock and a hard place.
+  
+   So here's where the invoice comes in.
+  
+   You make the invoice with the fully detailed breakdown of costs. 
+   Your NORMAL hourly rat
+   e x the number of hours + any additional 
+   costs for plugins etc. 
+   
+   then on another timeline you can list 
+   out any discounts. 
+   
+   The purpose of doing this is so that your
+    friends and family KNOW how much you normally charge,
+     and what your willing to provide for a discount. 
+
+     This in some effect anchors them and prevents them from
+      low balling you even further. It also allows them to 
+      see your actual cost when they tell their
+       friends about your work.
+
+respect your work and respect your cost of doing business.
+
+==============
+Answer 3. 
+==============
+
+I’d charge $3k, especially if it has good styling and good design,
+ and is indexed to google search I might add.
+
+ ================
+ Answer 4. 
+ ================
+
+How much time have you spent on it?
+
+Always charge for your time and expertise.
+
+Eg- if I’m doing a 5 page website and 
+estimate it will take 40-50 hrs, I charge $75/hr. 
+
+I will take a middle number of 45. So that’d be
+ $3375 for the project. 
+ 
+ I’d probably just charge 3000 or 3500, 
+ depending how the first meeting or two went (easy going client?, 
+ recommended from friend/associate?, do they want extra animations 
+ or effects?, we’re they nice or rude?, etc)
+
+If it were a family member, I’d probably knock off another 500-1000.
+
+DO NOT listen to advice of people that say “don’t charge hourly”.
+ Estimate your time on the project and multiple that by an hourly rate.
+  (20-50 for a jr, 50-100 for an experienced designer/dev, 
+  maybe 100+ for expertise/specialists, 
+  agencies often charge 100-200/hr).
+
+Also, make a projected project contract 
+with expected deliverables, project timeline,
+ and potential overages). Google web project
+  documents/contracts/agreements to learn more

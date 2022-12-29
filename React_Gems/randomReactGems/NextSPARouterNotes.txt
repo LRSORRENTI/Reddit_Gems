@@ -1,0 +1,96 @@
+
+===========================
+Does NextJS have a way of 
+using the router in a purely
+ SPA way? with transition?
+=============================
+
+===================================================
+ I have one set of pages in my app where I don't
+  want a page refresh. I want the pages to just
+   slide from one to the other and back, but I
+    want it to be routable such that the back 
+    button slides back to the previous one.
+
+Is this possible with Next's router?
+====================================================
+
+============
+First Answer
+============
+I'm pretty sure that making it
+ *feel* like that is what <Link> is for.
+
+ =============
+ Second Answer
+ =============
+ You would need to implement route transitions. 
+ There’s a few different resources that show how 
+ to do this but it would be mostly done in the _app.js file
+
+ =============
+ Third Answer
+ =============
+
+ <Link> tag or router.push(“your-route”)
+
+      ====================
+      OP Response to Third
+      ====================
+              
+               when I do that, the page does a refresh
+                  
+
+                  ==========================
+                  Response to above response
+                  ==========================
+                      No, it doesn’t. Next is an SPA with client
+                       side transitions only. You can “opt out” by using anchor 
+                      elements instead of Link components to navigate
+
+                      ====================
+                      Response to above
+                      ====================
+                         MUI exposes a "Link" component.
+                          They're not the same thing. 
+                          That's very likely what's going on.
+
+                              Here is a stackoverflow on that very topic:
+                              https://stackoverflow.com/questions/66226576/using-the-material-ui-link-component-with-the-next-js-link-component
+
+                                    There are two good solutions in there.
+                                     First is using the OLD NextJs Link behavior.
+                                      Second is using the MUI "component" prop.
+
+                                      ====================
+                                      OP Response to above
+                                      ====================
+                                        
+                                        yep that was it. I was using a MUI Button..
+                                         just switched to Link and it's working.
+                                          is there an easy way to add animation 
+                                          to the transition?
+
+                         =================
+                         Fourth Answer
+                         =================
+
+                         Build a template for the component/page.
+
+                          Use an id or aria as your selector. 
+                          Add some logic based around visibility/invisibility.
+
+                            const [isVisible, setIsVisible] = useState("id")
+
+                                Add a useEffect if needed and boom 🤯.
+
+                                   If your stuck on the idea of ReactRouter 
+                                   just install react router and stage the 
+                                   components how you would in a traditional react spa.
+                                    Don't forget, Next has React built in. 
+                                    Everything still works the same.
+
+                                        We build our messengers as SPA components essentially.
+                                         Within our "Components" we essentially
+                                          have a micro app with it's our index.tsx, 
+                                          styles and sub components leveraging react router

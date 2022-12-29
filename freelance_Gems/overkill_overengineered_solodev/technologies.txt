@@ -1,0 +1,245 @@
+=============================================================
+Which technologies are usually overkill for a solo developer?
+=============================================================
+
+=====================================
+https://www.reddit.com/r/webdev/comments/zmf80v/which_technologies_are_usually_overkill_for_a/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=10&utm_content=share_button
+=====================================
+
+==============================================================
+The web dev ecosystem becomes more and more advanced.
+ While appreciating some technologies in general, 
+ because they are applicable in some situations, 
+ they can be absolutely overkill for solo developers,
+  which develop not huge enterprise 
+ applications but rather small to middle apps.
+
+ Which technologies come to your mind? Docker, kubernetes, 
+static typed languages? I appreciate your opinions.
+
+================================================================
+
+========
+Answer 1.
+========
+
+ Any auto scaled/expensive server solution - 
+ generally even low $5/10 servers perform for most use cases
+
+ ==========
+ A-to-Above
+ ==========
+    
+     Made this mistake when building an app. 
+     Got the whole AWS setup and was overpaying by $300/month
+
+      ==========
+      A-To-Above
+      ==========
+        
+         I thought the new $5 Heroku plan was steep.
+
+              I am really wary of cloud platforms. 
+              Seems like I have incurred costs just
+               uploading containers that are not even deployed
+
+       ==========
+       A-To-Above
+       ==========
+           What did you use and how and why?
+
+             I only used some services at work and in
+              privat and lambda's and S3 is pretty cheap.
+               Even glue and athena can be quite cheap if
+                you don't crawl your data too often and 
+                aggregate and partition your data. Built a
+                 small analytics system and after optimization
+                  we are paying like 20 cents to 1 euro per day.
+                   A 5 to 10 dollar server would probably suffice too, 
+                   but it's really great to not worry about the server  
+
+==============
+Answer
+==============
+
+I'd argue that for s solo developer, 
+the stack you find interesting is exactly 
+what you need: want to learn about kubernetes?
+ Run your testing environment on it.
+  Easiest way to learn is to use it.
+
+  ============
+  Answer
+  ============
+
+  Statically typed languages seems odd to put in this
+   bin of solo dev overkill. To me, statically typed 
+   languages should be the default for most 
+   web dev stuff, solo or not.
+
+Medium sized apps are a web of interesting problems
+ so I don't think any tech can be given a blanket
+  overkill tag for them, solo or not.
+
+Small apps though, the overkill list is long. 
+Premature scaling solutions, premature optimization 
+as a priority, using an excessive amount of 
+frameworks that give more overhead than function...
+
+At most small apps should be doing the free 
+tiers of serverless services. Any framework that gets 
+you from A to B the fastest should be picked over any 
+performance concerns. As for frameworks, it's more of 
+the question of framework project scaling. Aka, should
+ you be using Gatsby instead of Angular for your 1 page markdown blog?
+
+=========
+Answer
+==========
+yeah mate same about statically typed languages.
+ If I'm on front end js I will always use TS to 
+ at least pretend I have some type safety. 
+ I'm .NET full stack, but I would chose grotty
+  (to me) Java over PHP or node.
+
+But then again I do corporate LOB work so 
+maybe small stuff would be fine? It's been too 
+long since I worked in that space.
+
+===========
+Answer
+===========
+
+Working with Kafka on a current project.
+ I believe we're not using it as intended, 
+ so definitely something that needs a large project.
+
+For a solo developer I recommend trying the 
+same with WebSockets. More reliant on everything being 
+single platform - but you can get a 
+similar coolness factor from it.
+
+============
+Answer 
+============
+
+Kafka honestly might have Kubernetes beat
+ for companies shooting themselves in the
+  foot with unnecessary complexity.
+
+Getting stream processing right is hard, 
+and most of the time your business requirements 
+only really justify the complexity of a plain/stupid pub
+ sub message bus.
+
+ =================
+ Answer
+ =================
+
+ microservices, hexagonal, 
+ ddd, grpc, graphql, cqrs, event
+  sourcing, kafka, kubernetes.
+
+===================
+Answer
+==================
+
+You should know GraphQL as a programmer in general 
+even junior courses like the full 
+stack open course from University Helsinki teaches it
+
+============
+Answer
+============
+true, though docker simply is the best for automated builds for
+ any applicatoin. not just because it finds issues that you have 
+ in the code that don't appear on your machine 
+("it works on my machine!") or a test-server because of some 
+config you have or a library you installed.
+
+spent too much time debugging stuff that was not reproducable
+ on build servers or my local machine because of cached libs,
+  libs not in the requirement of the app or weird config stuff 
+  i set up years ago and forgot i did
+
+  ================
+  Answer
+  ================
+
+  Docker ensures consistency. Period. If you have an app 
+  that uses FFMPEG to process videos. You have an image
+   that is a single source of truth. Not if Digital Ocean's
+    Debian 8 VPC has ffmpeg 5.2.1 or AWS has CentOS with 
+    ffmpeg 5.0.4 (with deprecated h.264 encoders) , 
+    some VPS like Chicago VPS that uses Debian 6,
+     or your local which may use GPU acceleration. 
+     I am talking a simple web app where users upload
+      videos and you may want to add opening titles or
+       create subtitles.
+
+With docker, there is no drift. **It is considered a 
+single source of truth.**When you run locally and in
+ production, it is the same version of the OS, same 
+ version of the binary with no exceptions. 
+ 
+ So in my example above, I can upload a video and depending
+  on which OS/version, I am gonna have missing sound 
+  or lip synch issue that will take hours to debug. 
+
+  Spending 2 minutes to do a docker-compose with expose
+   ports and volumes is better than 6 hours of re-compiling
+    ffmpeg because the data-center does not want to include 
+    potential licensing codecs, fonts, or drivers. 
+    
+    Ubuntu has a thing called ubuntu-extras for this.
+
+              ===============
+              Answer to above
+              ===============
+                 
+                  Well yes, if you are using FFMPEG I would consider 
+                  your app to be complex enough for docker.
+
+                          But if it's some simple Node API that
+                           talks to some mongo DB atlas thing...
+                           
+                            I would probably just throw it on a 
+                            server with pm2 and call it a day...
+                            
+                             but yeah I think it is something you
+                              have to evaluate on a case by case basis.
+
+                                 ===============
+                                 Answer to above
+                                 ===============
+                                              After awhile everything gets a little complex. 
+                                              Forget about FFPMEG for a second, just PHP-GD
+                                               gives me headaches.
+                                               
+                                                Common library just to resize an image 
+                                                upload on the backend.
+
+                                                      I dont do much PHP for the 10 years now
+                                                       but every so often I have to refactor 
+                                                       something and GD is troublesome. 
+                                                       Does it have libpng, or whatever to lib to 
+                                                       support jpegs? What, apt-get/yum install or pecl 
+                                                       install depending on host operating system.
+
+                                                              I rather just docker compose the whole thing 
+                                                              and it works everytime. Upgrading from 7.4 to 8? Easy. 
+                                                              change image tag #. Rebuild and test. If it works, 
+                                                              it goes to the client.
+
+                                    =============
+                                    Answer
+                                    =============
+
+                                       Yes, that's what I'm talking about too. 
+                                       We have so many VMs just ordered because somebody
+                                        needed to host a small app. If he'd made a Dockerfile, 
+                                        we would easily be able to redeploy it.
+
+                                            Now we're in the process of containerizing all of
+                                             them which is kinda backwards, though it 
+                                             still is saving us loads of resource

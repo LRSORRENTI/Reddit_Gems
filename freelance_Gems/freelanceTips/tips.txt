@@ -1,0 +1,293 @@
+
+=============================================
+Mistakes I made when writing web development
+ proposals and what I learned from them
+=============================================
+
+One of the mistakes I made early on freelancing 
+as a web developer, was not to write detailed proposals.
+ The client would ask for a "ballpark number" based on some
+  designs and not much formal specification. I felt pressured 
+  to give them a number quickly and would say something like
+   "This is probably around €5000".
+
+Of course the devil is in the details and a component 
+that looks very simple on Figma might actually require 
+a lot of interactions to be programmed or look 
+very different on mobile.
+
+Here's how I go about it today:
+
+Ask for designs before writing a proposal
+
+If no designs exist, ask for a budget instead and tell the
+ client if it's possible or not possible
+
+Break down the design / work into as small chunks as possible
+
+Estimate effort/value of these chunks
+
+In my experience, a detailed proposal is so valuable:
+
+It demonstrates to the client that we understand the
+ project's complexity
+
+It allows you to estimate accurately by breaking the work
+ down into concrete tasks
+
+If client wants the project done for less money, we can
+ easily point to features that cost a lot but the client
+  might not need. This way we do less work for less money
+
+It seems like a lot of effort to write detailed proposals 
+but it's worth it if you can charge more money that way. 
+It's also not that much work once you've done it a few times 
+and have a process to follow.
+
+I also made a little video showing my process
+ step-by-step with every word written and some 
+ real numbers: https://www.youtube.com/watch?v=D1yLzWSSCAA
+
+How do you approach writing proposals?
+
+Something I'd like to try in the future maybe,
+ is offering the same project at 3 different 
+ price points with different features. I've 
+ read that users usually choose the "middle" option, 
+ so this can be a good way to upsell more services to clients
+
+ =================
+ Answers
+ =================
+
+ ========
+ 1.
+ ========
+
+ I used to do this, but the problem I would run into is
+  that you would spend plenty hours planning 
+  and writing a detailed proposal/ quotation.
+   When you hand over the proposal, they would 
+   take that and find someone who will do it for
+    cheaper using all your hard work.
+
+So the best thing I started doing was to charge 
+for proposals / quotations and if it was accepted,
+ I would minus that amount from the final invoice.
+
+So for example I would charge R1500 for the quote/ proposal.
+ Let’s say the final quote amount came to R5000. The client
+  then would only have to pay the R3500. If they decline the
+   quote / get someone else to do it, I at least got paid for
+    all the planning work.
+
+The biggest downside was that with the industry 
+being so cut throat. I didn’t get much work as 
+nobody wanted to pay for quotes as every corner
+ shop would do free quotes or just sell off free
+  Wordpress template sites.
+
+I haven’t been in the web industry for many many
+ years now so I don’t know if that is still the case.
+
+ ==========
+ A to 1.
+ ==========
+ The answer to this is to charge for design."
+  We expect you to bring a design, if you do not
+   have one, we can offer services to help bridge
+    that gap". As long as you get paid for your time, 
+ its a small project - but a successful one.
+
+============
+ A to above
+ ============
+ Yes that's a good approach. I have some clients
+  who are designers themselves and they need to give 
+  their clients an estimate for the final thing before 
+  they even start designing. It gets a bit trickier then 
+  and I haven't come
+  up with a good approach that always works in that case
+
+  ==========
+  A to above
+  ==========
+
+  Thanks. I founded a successful startup a few years ago,
+   and personally used this solution to keep us from wasting 
+   time on uncommitted
+   clients. A lot of deals slip through our fingers, 
+   but we still get paid for the work we put in.
+
+Most of what we build are custom APIs that function 
+as data pipelines from system A to system B. We charge 
+500 for a design and sell it as a nonrefundable deposit,
+which we use as a credit for implementation costs if the 
+client chooses to close the deal. For more complex projects, 
+that number goes up.
+
+This thread is probably more in scope of a full stack webapp,
+ which id charge at least 1000 for a design - Because it
+  requires an actual front end design AND a backend architecture.
+
+===============
+OP A to 1.
+===============
+ I think it's a really interesting idea to charge for 
+ creating the estimate and then deduct it from the final invoice.
+  Car repair shops I've been to do the same thing
+
+  =====
+  A 2.
+  =====
+  I only give a single page SOW for estimates now.
+   It has a summary of the work, either fixed or 
+   hourly rate for the work, a expected deadline 
+   or number of days to perform the work, a bullet 
+   list of what is included AND a list of what is 
+   not included for the price.
+
+I also have a general service agreement which
+ is my main contract. Lists all terms and
+  conditions for work. It mentions the SOW 
+  is the project scope which is the work to
+   be performed and additional SOWs can be 
+   added at any time but are tied to and legally 
+   bound to the same Service Agreement.
+
+This way I never have to change my contracts except 
+for when I need to add a new clause to protect from 
+something I didn’t consider before. And I make old
+ clients sign the new agreement to replace old contracts.
+
+I also give myself 2hrs of onboarding time 
+(which is added to my SOW hour estimate) for
+ writing SOWs and kickoff call to discuss with potential clients
+
+ ==========
+ 3. A 
+ ==========
+
+ Interesting freelancer template: 
+ https://betterproposals.io/template/index.php?ProposalID=ocnaMhudPdtqiP_5mdAJeJNC8gCmVA43prSx_gYpK44&cat=sow
+
+
+ =========
+ 4. A
+ =========
+
+Yep. Always have an itemized list of deliverables and
+ up-sales. There are things such as training hours
+  include after delivery and charge if extra. Just as 
+  example, because you know, SEO is not done after your
+   work is delivered. You have to add them as you edit
+    and their employee that take over maintenance of the 
+    site can change after you deliver.
+
+Having itemized list gives you a list of so termed - deliverables.
+ This allow you to check it all off when you review with them,
+  such that, you can said everything is delivered and probably 
+  above and beyond. They can't then later, come back and tell you
+   that you promised something that they didn't sign on 
+   that original SOW. And if you say, extra hours cost 
+   extra after delivery, they can't constantly bog you 
+   down with new issues of the site after they broke it.
+    Up-sales can be monthly contract maintenance that provide,
+     say 2 hours free work per month as example (use it or loose it).
+      That way, you have -- somewhat -- passive income.
+
+Contract need to be clear, like your charge work by every
+ 15 or 30 minutes round up. They can't send you an email 
+ and tell you to look into something for 5 minutes and say
+  why did you charge them 15 minutes. Your contract covers
+   this and you can tell them to look at the contract. 
+   Because sometime, reading email and virtual meeting or 
+   call with them can bog you down for hours.
+
+I've seen client bother independent contractor in the 
+middle of the night, saying it's an emergency because 
+their site is broken, even though it has been broken 
+for weeks and they've only seen or caught it now. 
+Can't freaking wait until morning?
+
+===========
+5 A. 
+===========
+
+I see the issue with this is, many clients only 
+want to hear the ballpark and agree to it.
+
+Many times i start asking questions and getting 
+all the technical requirements, try to itemize scope, etc... 
+Just for them to "not feel comfortable" getting that specific.
+ They seem to think i shouldn't define these things because
+  they themselves do not know what they need.
+
+Example:
+
+I ask, "Do you need the contact forms intetrated with 
+any 3rd party services like MailChimp?"
+
+Client Reply, "yeah but we're not sure what service 
+or the functionality we want yet - but we need it 
+in the quote/estimate to move forward"...
+
+Ive even defined scope, and had a client contest 
+in Arboration (and lose) with the claim that
+ "My job posting says i need a full functioning website,
+  and the developer refused to build XYZ which I say is
+   required to be a fully functioning website
+
+==========
+6. A 
+==========
+
+It really sucks when you're freelancing or starting out.
+
+But those are the customers you don't do business with.
+
+First, they don't know what they want.
+ Very much sounds like somebody told them
+  "you need a website" and they ran with it. Which is fine.
+   If you're in the business of consulting on it.
+    Which you can bill for but again they probably won't pay.
+
+Second, they don't respect your skills or services.
+
+Remember that you don't ever work for them.
+ You work with them to solve their problem.
+  That's not to say you can't have good customer 
+  service or be flexible. You just don't have to put
+   up with their nonsense.
+
+===========
+7. A 
+===========
+
+You should always charge "discovery." 
+This is the work that you spend time
+ capturing their requirements, learning 
+ their subject domain,etc. For example, 
+ if you are building a bespoke CRM/admin app, 
+ you may have to shadow and follow an employee
+  around for a day to learn their business process
+   to get their pain points. Or reviewing dozens of 
+   excel files; asking for clarifying questions to design a database.
+
+So this is all billable. A lot of people try to offer 
+this for free. Your time is money. Even if it is research.
+
+In my SoW, I always line item discovery time and cost.
+
+==========
+8. A 
+==========
+
+If I am not the designer I always indicated that 
+the price is subject to change based on the final 
+design. Designers always tend to add a lot of extra 
+work to code various bells and whistles they want for
+ their portfolio that are no way at all related to 
+ actual project scope.
+
+I've had projects where the design increased cost by 2X's or more.
