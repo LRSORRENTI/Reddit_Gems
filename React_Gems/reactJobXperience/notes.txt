@@ -1,0 +1,144 @@
+Posted by
+u/Classic_Panda_5502
+
+
+===========
+Question
+============
+
+===================================================================
+Feeling overwhelmed in my second React role. Advice appreciated
+===================================================================
+
+I’m a self taught dev and I landed my first React contract 
+about a year ago. I still consider myself a junior. 
+I started looking in October because my contract was 
+coming to an end and found a job fairly quickly.
+
+My new company started to develop a React version 
+of their mobile app almost two years ago. It seems 
+like they outsourced the project to a contractor 
+firm based abroad and didn’t have a senior react 
+dev to manage the contractors. About 5 months ago,
+ after firing the second batch of underperforming 
+ devs from the contractor, my company realised the 
+ work done is sub par and also doesn’t use much 
+ Typescript either as specified. They are working 
+ to bring in local dev(s?) onboard which is 
+ why they hired me.
+
+I knew the lack of implementation of typescript 
+and the need to rewrite a lot of the code from my interview. 
+But I’ve found that the contractor (with 4-5 devs ) is
+ still working on the codebase for at least another five months, 
+ and also they are still not required to do pull requests.
+  Some of their work could do with a code review. 
+  It may be my dunning Kruger speaking but I
+   believe they are mostly junior React devs skill wise.
+
+The situation is I’m still onboarding, 
+and I can’t plan/review the work of 4 devs even 
+if I weren’t. We have one senior dev on the project since Oct,
+ but he is a full stack, typescript specialist, rather
+  than react specialist. Half of his time is on the backend work.
+   I’m under pressure to develop features based on the most
+    horrible spaghetti, anti typescript/ anti pattern code 
+    I’ve never been able to imagine.
+
+I’ve raised my concerns regarding code quality
+ and the senior dev emailed management about needing
+  PRs before merging features into release branch, 
+  but I saw no changes in processes. CTO and project manager
+   knows the code is bad.
+
+I’ve succeeded to get them to use MUI as a UI library 
+instead of coding their own , so late in the development cycle, 
+installed Eslint etc, but I’m annoyed each time I see bad code. 
+I see the contractors, unmanaged, continue to add to the chaos.
+ Deadlines drive their work. I can’t blame them
+  entirely because I see they lack support.
+
+I want to take ownership but I can’t, and even I struggle
+ with getting support from a senior.
+
+What can I do. I feel burnt out after one month! Fml.
+ Should I quit ?
+
+Edit: All devs experience stress. Am I being melodramatic?
+ Is this process/feelings to be expected when coming
+  into a new codebase?
+
+  ===============
+  Answers
+  ===============
+
+=====
+  1.
+=====
+You can prevent pushes to the main brach and require PRs
+ in the repo configuration: https://stackoverflow.com/a/57685576
+
+I would start a new repo and slowly work to rewrite
+ & migrate the contractor code over. That way the new 
+ repo becomes the gold standard, and nothing that isn't
+  PR'd/reviewed gets in. This approach also
+ makes it look like you wrote the entire codebase 😛
+
+Obviously your company struggles with leadership,
+ and since you're already considering quitting this seems 
+ like a risk-free opportunity to develop your own managerial skills.
+  If your higher-ups don't like your methods, then they'll
+   get rid of you and you're free to move on. If they like
+    your approach then you'll have proven yourself a creative 
+    and effective leader and set yourself up for promotion. Win-win.
+
+As for burn out, it sounds like the chaos is the driving factor. 
+Don't sweat what you can't control. Contribute what you can,
+ where you can, but the whole thing was a shit show before
+  you got there so don't feel bad that you haven't fixed it 
+  all in your first month!!
+
+  ==============
+  OP reply to 1.
+  ==============
+  Thank you for your advice. I fear I can’t
+   unilaterally request PRs because we lack 
+   the resources to review them. And we got xyz 
+   deliverables we need to hit etc. 
+   
+   But the contractors
+    can’t improve without PRs. And I can’t improve without
+     senior react devs either. 
+     
+     I appreciate your words about needing control. I’m doing some 
+     work over Xmas break because I feel like I’m behind, but I 
+     didn’t expect how much anxiety I suffered 
+     from working during the holidays. 
+  (I don’t resent learning dev outside of office hours).
+
+  ================
+  1. Reply to OP 
+  ================
+  They hired you as what, junior/mid? Heads down work on your tasks 
+  and ignore everyone else, point/score your tasks high, 
+  write as much code from scratch as you can, use this repo a
+   a sandbox to try new stuff and learn a lot, quit when you get
+    something else.
+
+Don't be afraid to disappoint them, the company focus is
+ saving money on cheap labor and exploiting you to build a gazillion 
+ features so they can make more money. You are not their saving grace 
+ so stop holding yourself to that high standard.
+
+And stop working during xmas break before you burn yourself out,
+ you can continue "learning dev" (read: working) next year.
+
+ ==============
+ OP Reply to 1.
+ ==============
+
+ The company hired me as a ‘React developer’ without
+  specifying my level. But I guess the CTO dangled the
+   prospect of me eventually taking over the React codebase one day.
+    Which is why I’m so emotionally invested over the code quality.
+  Thanks for sharing your views. I need boundaries.
