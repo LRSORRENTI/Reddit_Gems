@@ -1,0 +1,73 @@
+
+=================================================================
+Difference between module.exports.name = name and export {name}
+=================================================================
+
+===========
+Top-Comment
+===========
+You can think of 
+
+module.exports.name = value 
+
+as the legacy way to export stuff 
+(It's specifically called the common-js module system, or cjs). 
+
+It's what node used before the JavaScript language created an
+ official syntax for importing and exporting data (the es module system).
+
+Now days, it's better to just use
+
+ export { name } 
+ 
+ and
+ 
+  import whatever from 'wherever' syntax (the es module system)
+  
+  , wherever you can. But, it's been a long, hard transition process, 
+  and you'll see many libraries and frameworks that are still
+   documented with the cjs system, and sometimes they don't work very well if you try to use the es module system with them. Node itself doesn't actually support the es module system unless you explicitly enable it, due to backwards compatibility reasons - there's various ways to enable es module syntax in node, take a look at their documentation
+ here for information on how this can be done.
+
+ ========
+ OP REPLY
+ =========
+ So for backend using node js, should I use es or cjs?
+
+ ==============
+ Random REPLY
+ ==============
+ For new projects use ES modules. Node supports both,
+  but ES modules are a part of the official spec, and 
+  are here to stay (not to mention,
+  that some newer libraries no longer support CJS).
+
+  =======
+  OP REPLY
+  ========
+  So stick to es that is to say do:
+  
+   export {name} instead of module.exports.value = name
+
+   ===========
+   REPLY
+   ===========
+   Yes, to enable this syntax in Node, you have to either
+    add "type": "module" line to your package.json, 
+   or use .mjs extension for your JS files.
+
+===========
+REPLY
+===========
+If I write two files, one for the calculator functions
+ and it’s exported and the other which actually imports
+  the calculator functions, does the one that’s going to be 
+exported need to be named .mjs for me to use the es method?
+
+============
+REPLY
+============
+Both. But I recommend using the first method, just add that
+ single line to package.json, and you can use normal
+  extensions. .mjs is rather 
+for simple scripts where you don't want to create package.json
