@@ -1,0 +1,197 @@
+========================================
+I am in awe at how complicated redux is. 
+surely there must be a better way right?
+=========================================
+
+============================================
+i started a project about three weeks ago.
+ finished the back end pretty quickly.
+
+ I decided i wanted to use redux with react 
+  on the front end. i didn’t know redux so 
+  i had to learn it. started with the docs.
+
+  I got the concept pretty fast. understood
+    synchronized redux logic pretty well. 
+    then i started async.
+    
+    The complexity increased by about 10 folds. 
+    it still wasn’tso bad, so i finished part 5 of the redux 
+     essentials docs which was the async part.
+
+      Before starting the part 6, i said to myself,
+       “surely it can’t be much more complicated than 
+       what i just finished learning”. 
+       
+       Boy was i ever so wrong. i feel like
+        i don’t even know what is happening again.
+         it feels like i’m telling
+         myself every five minutes that “i somehow 
+         maybe understand how the function works but 
+         the structure is quite complicated tho”. 
+         
+         what is amazing is that as i scroll down the sections
+          it just keeps getting more complicated. 
+          
+          i am in awe.
+          
+           Anyone that is an expert in this must be 
+          pretty smart. now, im scared that even tho i finish all 
+          the parts, 
+          i’m not even sure i would be able to apply it to
+           my own project. 
+           
+           i guess i just came here to vent,
+            and for someone to tell me that part 6 isn’t really 
+            necessary in actually using it in a project.
+             
+             But even if it is, 
+             surely there must be a better
+ way to make it less complicated to learn.
+
+ =========================================================================
+
+ ANSWERS
+
+ ==================================================================
+
+ ============
+ Top Comment
+ =============
+
+   Redux is very robust and is not React-specific 
+   state management system and can be daunting how
+    deep the rabbit hole goes.
+
+I suggest you use Redux Toolkit as it is much easier 
+to implement with your React app. Much less boilerplate,
+ no connects, middlewares etc. 
+ 
+ Instead of subscribe you use useSelector hook.
+  Dispatch your actions with useDispatch.
+   You can even make async actions and save 
+   them to store from redux itself so you have
+    no axios logic inside your component, 
+    using createAsyncThunk.
+
+Personally, I H-A-T-E-D Redux until I found out about
+ Redux Toolkit. Now it's a breeze. TypeScript coverage 
+ is great as well. The main thing that you should figure
+  out whether or not you need Redux.
+
+        =====================
+        REPLY TO TOP COMMENT
+        ======================
+
+             Seconded, I think it's worth doing a 
+             little bit of 'vanilla' Redux in order
+              to understand what it's actually doing,
+               but for anything beyond a few bits of 
+               state RTK makes everything so much simpler
+                and clearer.
+
+               Also in my experience the Redux docs don't
+                exactly go out of their way to make things
+                 simple to understand. There's a bit too 
+                 much excessive programmer-speak when the
+                  exact same thing could be expressed in 
+                  plainer 
+                  
+                   =====
+                   RE
+                   =======
+                     I wholeheartedly agree. The docs are needlessly overcomplicated.
+                         The level of "vanilla Redux" one needs can 
+                       be found on FreeCodeCamp and it ties it up nicely in "React+Redux" module.
+                            After that RTK all the way!
+
+                            ============================
+    
+
+    ==================
+    Second TOP Comment
+    ===================
+       i understand your frustrations since i have gone 
+       through this. but if you want a job learn React/Angular
+        only these 2 are used mostly. and you don't have to
+         learn classes go to react beta docs which is going 
+         to be released officially next month ( i hate them 
+         for taking 2 long years to make a 
+       decent docs but still better late than never)
+
+       ============================
+       Comment
+       ============================
+       I learned redux as part of codecademy’s full stack 
+       developer course. It made zero sense to me. 
+       I went off a built a simple game for my daughter
+        in react and then re-did it, this time using redux.
+
+         It suddenly made a lot more sense. Unless what
+          you’re doing requires a solution like redux it’s 
+          just something else you have to remember and
+           therefore seems really complicated and unnecessary.
+            Like trying to explain why a car has gears to
+             someone who’s only ever ridden a horse.
+
+             ============================
+             Third top Comment
+             ==============================
+             Redux isn't just a solution to
+              state-management, it's also a 
+              solution to storing all state in a single, 
+              JSON-serializable object. 
+              
+              This enables the
+               use of various tools that wouldn't otherwise 
+               be possible to use, like "time traveling" 
+               (the act of jumping back to an earlier point in history, 
+               by simply recording all state, and then picking and 
+               applying an earlier state object). 
+               
+               At the beginning of the Redux docs, 
+               it gives a warning that you might
+                not actually need Redux, and links to this
+                 excellent article that dives more into some
+                  of the reasons why, and some other interesting
+                   things that Redux enables because it stores state
+                    in a single large object.
+
+
+
+The thing is, not everyone needs what 
+Redux has to offer. 
+In their FAQ, they share this quote:
+
+"don't use Redux until you have problems
+ with vanilla React."
+
+I very much agree with this advice. And, 
+when you do grow out of vanilla React
+ (something that's harder to do nowadays, 
+ since they've added tons of features to help
+  with state-management), it's worth looking 
+  around for other solutions outside of Redux.
+   
+   React used to not have great built-in state management, 
+   and Redux used to be the only major alternative
+    on the block, which is why everyone used it, 
+    but it wasn't necessarily the best tool for these jobs. 
+    
+    Today, a number of other good state management
+     tools have been built that are just as capable as 
+     Redux at handling state-sharing, but are much simpler
+      to use, because they don't try to store all state 
+      in a single large object. This also means, you won't
+       get some of the perks Redux has to offer, like the 
+       previously-mentioned time-travel ability, but, more
+       -likely-than-not, you weren't needing those perks 
+       anyways.
+
+Finally, it's worth mentioning that I know they've 
+come out with Redux-toolkit, which is supposed to be
+ more user friendly than vanilla Redux. I've never
+  used it myself, so I can't give an opinion on it,
+  but it may also be worth looking into that.
+
+  

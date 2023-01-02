@@ -1,0 +1,28 @@
+==================================================
+What should I 
+do before learning State Managment System like Redux?
+====================================================
+
+theScottyJam:
+
+Redux gained a lot of popularity when React 
+didn't have great built-in state management solutions, 
+and there really wasn't other good third-party solutions around.
+ This isn't the case anymore, and there are plenty of other great
+  state management solutions out there to use, some of which might
+   be more user-friendly than vanilla redux.
+
+
+
+Honestly, I wouldn't bother learning it 
+just to learn it. Wait until you feel like your 
+state is turning into a mess, then research different
+ solutions that are out there to help solve your problem, 
+ and pick the one that would be the best fit. The answer
+  these days might not always be Redux. 
+  
+  It's hard to really
+   appreciate what Redux, or other state-management tools
+    can really do for you, until you have an actual problem
+     for them to solve. Otherwise, 
+they're just adding boilerplate with little benefit.

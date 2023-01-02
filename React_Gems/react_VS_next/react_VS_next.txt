@@ -1,0 +1,521 @@
+
+========
+QUESTION
+========
+
+Old dev looking for advice. Reactjs or Nextjs?
+
+=========================================================
+
+
+Needs Help
+Old dev here (asp.net, c#, jquery, php). 
+
+I'm mainly a php developer but I have 
+
+shipped hybrid mobile/web apps using 
+
+cordova/framework7, however I'm looking 
+
+into learning the modern way of web/app development.
+
+
+
+
+
+I want to deploy an app for 
+
+all major platforms
+
+ (desktop/mobile browser, android, ios),
+ 
+  should I be using reactjs or nextjs? 
+  
+  
+  
+  Let's say the app allows a user to pay for a
+  
+   service/subscription (and login is required to access the service).
+
+I'm thinking I could just setup an
+
+ API using anything I could (express, asp.net, or even php)
+ 
+  then reactjs for the UI. With that,
+  
+   I believe it would work on my required platforms
+   
+    (I'm guessing I could also reuse code on react native for faster UI).
+
+
+
+
+
+Now, I've been hearing good things about nextjs 
+
+and thinking how would using it be better in
+
+
+ my case (considering I don't think I'd need
+ 
+  ssr for now, and I could also host static 
+  
+  files some other way, on another server or subdomain).
+  
+  
+  
+  
+   However, I'm thinking my app could easily grow
+   
+    to several pages/views (home, profile, payment
+
+
+     setting, security settings, product list, payment, etc.), 
+     
+     and could use easily use nextjs built-in routing.
+     
+     
+     
+     
+      With nextjs being server hosted, will I be 
+      
+      able to package my code and deploy it as an 
+      
+      app for my required platforms (the app I 
+      
+      shipped before has a single codebase and 
+      
+      then using cordova/framework7 I was 
+      
+      able to deploy to web, mobile web, android, and ios.)?
+
+
+
+Is Nextjs more comparable to php 
+
+(and other server-side tech) than to Reactjs?
+
+
+
+Why should I use one over the other
+
+ for the example project I mentioned above?
+
+==========================================================
+ANSWERS
+=========================================================
+
+TOP COMMENT:
+--------------
+
+To be clear:
+
+React is the core UI rendering library
+
+Next uses React to do all the UI 
+
+rendering, and adds a lot of 
+
+client+server features (routing, data fetching, etc)
+
+
+
+So the question is more about what build tooling 
+
+you want to use as part of deploying the client 
+
+side of the app, whether this is a pure Single 
+
+Page Application or more of a Multi-Page Application, 
+
+how you intend to handle data fetching,
+
+ and whether you need Server Side Rendering.
+
+  =======================
+    OP RESPONSE TO ABOVE
+    =====================
+
+                In my case above, 
+                
+                paid service app, user login,
+                
+                 I'm leaning towards to just using reactjs.
+
+                Would using Nextjs be better considering
+                
+                 the things I mentioned in my post?
+
+                 ==================================== 
+                  RESPONSES TO THIS RESPONSE
+                  ===================================
+
+                     If you are building something which 
+                     
+                     is just for logged in users,
+                     
+                      plain React is simpler since you are learning.
+                      
+                       NextJS is built on React, and is mainly for
+                       
+                        features which are meant for public 
+                        
+                        sites(SEO) and performance benefits.
+                        
+                         But you don't need to care about 
+                         
+                         it that much for apps behind logins.
+
+
+          =================
+           R to OP
+           =================
+
+              I would strongly advice against 
+
+              just reactjs, because then you’ll 
+              
+              have a bigger learning gap imo to setup a good project.
+              
+               Nextjs actually gives you a structure 
+               
+               to work in and does a lot of optimizations for you
+
+
+               =======================
+               R to OP 
+               =======================
+
+                   “Just using reactjs” doesn’t make sense. 
+                   
+                   You’ll still need a backend. 
+                   
+                   What other backend would you use? 
+                   
+                   You could use PHP 
+                   
+                   (eewww. It my my first
+                   
+                    love but I’m so glad 
+                    
+                    to be rid of it). Or Python, or node.
+
+                   Nextjs is just react + node packaged 
+                   
+                   pretty well together.
+
+                      If you’re starting from scratch and
+
+                        need a ui and a backend, nextjs is hard to beat.
+
+                        ==========
+                        OP REPLY
+                        ==========
+
+                               Ok, what I mean to say was 
+                               
+                               just use react and of 
+                               
+                               course some other tech on the 
+                               
+                               server side to handle the backend stuff.
+
+I                                  thought that was obvious and common sense.
+
+                                            =============
+                                            REPLY TO OP
+                                            ============
+
+                                                In the context of the comment,
+                                                
+                                                 you’re always using react.
+                                                 
+                                                  So why is it mentioned? 
+                                                  
+                                                  It’s not an either or. It’s next or not.
+
+
+                                                    With next you still need something to 
+                                                    
+                                                    run your backend and have an api, 
+                                                    
+                                                    like express or socket.io.
+
+                                                  
+                                                  It comes down to how much tooling you want to 
+                                                  
+                                                  write. Next is fine. It’s not 
+                                                  
+                                                  optimal for all use cases but 
+                                                  
+                                                  great for most. Are you trying 
+                                                  
+                                                  to get into tooling or do
+                                                  
+                                                   you want to just let next take care of it?
+
+
+===================
+different reply to OP
+====================
+
+  I've used php for 20+ years, 
+  
+  it's simple for me to put up a php backend. 
+  
+  To just call a db and return 
+  
+  data there's not that much php coding involved. 
+  
+  So that's what I've stuck with while learning react.
+
+
+
+At this point I do feel more at home 
+
+in python than anywhere else....
+
+but I've never used python to make a back end.
+
+ What would you use to do that? Aside from 
+ 
+ loveliness of the language itself, what advantage 
+ 
+ does python have over php for a backend?
+
+             ==============================
+             REPLY TO  THIS COMMENT ABOVE
+             ==============================
+
+                The main advantage over PHP
+                
+                 imho is how the backend logically operates. 
+                 
+                 It’s been a while since I’ve played with php,
+                 
+                  but if I’m remembering correctly,
+                  
+                   you don’t really have persistent
+                   
+                    state in memory possible in your “app”. 
+                    
+                    
+                    It’s not really a background daemon 
+                    
+                    that you send requests to.
+                    
+                     It’s a bunch of little scripts
+                     
+                      that do one this quickly 
+                      
+                      enough once and then shutdown.
+
+===================================
+NEXT COMMENT
+===================================
+
+I would definitely start with React, 
+
+then build upon that knowledge 
+
+to lnow wjetjer or not to include NextJS.
+
+ You really can't use NextJS without
+ 
+  React knowledge, but you can use
+  
+   React without NextJS knowledge.
+
+
+You'll eventually want to understand 
+
+when to use NextJS (for SEO, for initial
+
+ load speeds, for hiding API 
+ 
+ access behind firewalls) but, 
+ 
+ like all technologies, whether
+ 
+  not you need NextJS... depends.
+
+
+If you end up building enterprise dashboards 
+
+or truly interactive client-side apps 
+
+like spreadsheets, it might not be
+
+ important to take advantage of what NextJS offers.
+ 
+ 
+  You also may not want to have to run NodeJS as 
+  
+  your front-end app server, or pay for cloud 
+  
+  capacity to serve your pages, when a simple 
+  
+  nginx or apache server can load your entire SPA
+  
+   front end without worrying about server 
+   
+   load beyond API usage. It's never a
+   
+    black-and-white decision, just like any other tech.
+
+
+
+
+
+But whether or not you choose NextJS,
+
+ you'll always be using React either way.
+
+
+With node/Python,
+
+ you have a persistently running program 
+ 
+ that gets events that you must handle
+ 
+  with a response. That makes more logical sense to me.
+
+Though we definitely have different
+
+ beauty standards… so do what is good for you.
+ 
+
+
+ ==================
+ NEXT COMMENT CHAIN
+ ==================
+
+ You should never use client-only 
+ 
+ react in a production app. 
+ 
+ It is slow to become interactive,
+ 
+  has bad SEO, and can't display at
+  
+   all on browsers with JS disabled.
+
+
+
+Reply
+
+
+What do you suggest then based on my sample project requirement in my post?
+
+
+If it is going to be primarily an
+
+ e-commerce app or have a big product catalogue,
+ 
+  I would suggest Remix, which is optimised for 
+  
+  that exact use case. You can still use Next though,
+  
+   especially if you are already familiar with it.
+
+
+
+
+If I use remix, will I still be
+
+ able to publish the same code
+ 
+  base to app stores? (as hybrid
+  
+   web app or if I use react-native 
+   
+   to compile to android and ios)
+
+Remix is cool and all but
+
+ that SEO remark should already be resolved by using nextjs
+
+ =======================
+ NEXT COMMENT CHAIN
+ =======================
+ 
+You can use React with Next.
+
+You need back-end in most real sites anyway.
+
+I switched to Node from PHP when I
+
+ started to learn React (using Remix atm
+ 
+  instead of Next though)
+
+NextJS. Final answer. Having said that I
+
+ think you meant CRA (Create React App) vs
+ 
+  NextJS because both are React.
+
+
+I’m no expert and I’ve never had a dev job
+
+ but the way I understand it is next.js
+ 
+  is server rendered react that then ‘hydrates/caches’
+  
+   on the client as the user navigates around. 
+   
+   
+   You can create a PWA that would run on
+   
+    Android/iOS browsers but I don’t 
+    
+    think you can compile to native 
+    
+    iOS or android.
+
+From what I’ve seen react-native
+
+ uses special mobile components 
+ 
+ different from react so there’s 
+ 
+ not as much UI reuse as one might think.
+ 
+ 
+  Also there are some funky css 
+  
+  differences like flex-direction: column being the default.
+
+However I think you can compile to web, iOS, 
+
+and Android from react-native so that might
+
+ be a better route if you just want to deploy from 1 codebase.
+
+If I’m way off someone let me know.
+
+
+Yes, this is what I'm currently leaning towards:
+
+Any server-side tech for my API + Reactjs (react-native) for the UI
+
+But since my knowledge is limited, I'd like to know 
+
+if there's something better (mordern) like Nextjs
+
+ that might be more fit to use.
+
+
+
+
+ I'd recommend having a look at Inertia JS.
+
+Combined with Laravel, you'll 
+
+have something familiar to build on.
+
+Or if you want to keep it all 
+
+in JS land, combine it with Adonis 
+
+JS which is basically a Laravel clone.
