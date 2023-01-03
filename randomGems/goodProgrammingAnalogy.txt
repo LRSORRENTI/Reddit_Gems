@@ -1,0 +1,50 @@
+
+================================
+GOOD PROGRAMMING COMMENT
+================================
+
+=================================
+The following analogy is what I 
+came up with to teach my juniors:
+=====================================
+
+Consider you have one lego block. 
+
+There's not much you can so with it.
+
+Now imagine you have 100 lego blocks,
+ you can stack them up and probably
+  end up with a small tower of lego 
+  blocks or you can lay them in a 
+  fashion and end up with a wall.
+
+Now if you have a million
+ lego blocks you could potentially make
+  a castle but that would require a lot
+   of planning, a lot of trial and error 
+   since you are doing it for thr First Time.
+
+However, if you do this often,
+ you learn subtle tricks using
+  which you can make a castle
+   quickly and show off your skills.
+
+Same logic applies to coding.
+ Each lego block is CRUD
+
+With one crud, just like one
+ lego block you can't do
+  much But if there are many
+   crud, just like many lego 
+   blocks you can make a full
+    fledged software but for
+     that you will need practice.
+
+The way to learn coding 
+would be to try and analyse 
+anything and everything you
+ use and figure out how crud
+  would be working in background 
+  for the item under investigation.
+
+Hope this helps
