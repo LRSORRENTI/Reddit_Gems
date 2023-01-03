@@ -1,0 +1,310 @@
+Posted by
+u/_player_0
+
+
+
+==========================================
+Typescript <<< JavaScript. Come at me bro.
+==========================================
+
+Typescript coding is portentous, 
+pretentious and pompous. Typescript 
+adds tons of boilerplate, can be 
+difficult to read and set up, and the 
+complexity it adds is not worth switching from JS
+
+=============
+REPLIES
+=============
+
+1.
+
+typescript is just leaving formal 
+
+sticky notes in your code so you 
+
+remember what the shape of the
+
+ shitty objects you're passing
+ 
+  around have 2 years from now,
+  
+   and also letting these other
+   
+    numb numbs know what props
+    
+     they need to pass in so your
+     
+      component doesn't explode 
+      
+      the internet browser tool
+
+      ===========================================
+
+      2.  
+
+       Typescript >>> Javascript, because:
+
+--- Reduces type errors. 
+
+--- You can't pass number to a
+ function requiring a certain type of object.
+ 
+--- You can't call a function with wrong
+ number of arguments. 
+ 
+ --- You can't pass possibly 
+ undefined values as defined objects.
+
+--- Makes it easier to refactor code. 
+
+--- VSC yells when you change anything 
+regarding types and function signatures. 
+
+--- Increases DX and speed.
+
+--- Documents your code.
+
+--- You actually see what 
+the function needs and returns
+ from the contract defined with Typescript.
+
+--- Personally, I use TS even for 
+the smallest scripts or hobby projects. It comes naturally. 
+
+Vanilla Javascript feels
+ dangerous and very incomplete to me.
+
+Besides, you can use TS 
+incrementally in your codebase.
+
+ No need to convert everything at once.
+ 
+  Start with some portions, you won't regret it
+
+  ===================
+  REPLY 3
+  ===================
+
+  When you say you can add TS 
+incrementally to a project, 
+  isn't that complicated?
+
+My company is still using 
+2016 react (yuck) and are
+ tasking me, a relative noob, 
+ with updating the core to modern react
+  (rebuild it from scratch).
+  
+   I got pushback when mentioning TS,
+    then I went digging into the option 
+    of using TS for the API layer 
+    only and saw that you would have
+     to compile the JS and TS parts
+      separately if using both in 
+      the same codebase? 
+      
+      It has a been a few months 
+      and I've never used TS, 
+      so I'm pretty clueless 
+      and open to advice on this.
+
+             =============
+             REPLY to 3
+             =============
+                   
+                    So I loooove Typescript, 
+                    but personally I'd caution you against
+                     going Typescript until you've modernized.
+
+                      I suggest this because:
+                   You're a "relative noob",
+                    already taking on a big task.
+                    
+                     Trying to learn too many things
+                      at once is often a mistake.
+
+                         It sounds like you've 
+                         already had some pushback on it
+
+                          It's reasonably easy 
+                          to start adding it after
+
+                           For a big refactor, 
+                           adding types could potentially
+                            make things easier, 
+                            but that comes with 
+                            some real experience I think.
+
+                             Yes, TS can be added incrementally, 
+                             but you do have to make significant 
+                             changes to how your app is built. 
+                             
+                             Presumably if you're doing 
+                             React you're already compiling 
+                             (babel / webpack / etc...).
+
+                         I'd suggest getting the big task done, 
+                         and doing some side experiments with TS.
+                          Try to get other people at your company
+                           excited about it too. But keep it as
+                            simple as you can with your big task.
+
+                            ================
+                            REPLY
+                            ================
+                            Using Vite is a cheat code to get a good
+                             dev and build environment working quick. 
+
+                             Should just focus on an incremental TS
+                              migration after you convert to functional 
+                              components and update libraries
+                               (and don't rush that process)
+
+                               ==================
+                               REPLY
+                               ==================
+
+                                is only a problem if 
+                                you're struggling with
+                                 understanding their errors.
+                                 
+                                  Those are badly structured
+                                   and hard to read, which is 
+                                   something I wish TS would improve.
+
+                                 But with experience it stops 
+                                 being an issue and only the 
+                                 good things are left.
+
+                                      Just a simple example of what TS does.
+
+const Select = ({ options, selected }: SelectProps) => { ... }
+
+//
+
+const Foo = () => {
+  return (
+    <Select options={['foo', 'bar']} seleted={'foo'} />
+  )
+} 
+
+                                 TS would tell you in your IDE that 
+                                 "seleted" is not a prop. Without
+                                  TS you're stuck trying to 
+                                  understand during runtime why 
+                                  your dropdown doesn't work and 
+                                  would keep debugging the Select 
+                                  source code until you arrive at 
+                                  the conclusion you made a typo. 
+                                  
+                                  It saves SO much time.
+
+                                And I'm not even talking about autocomplete.
+
+Other commenters had it right.
+ TS is only hated by people 
+ who don't do serious production-deployed
+  projects in a team.
+  
+   JS might sound good if 
+   you're doing something 
+   small quickly on your own.
+   
+    But in a team there's so many benefits... 
+    
+    For example quickly looking at the Props 
+    interface to see how to use a component
+     you didn't write. Having types
+      for every prop in that case is so nice.
+      
+      ====================================
+      INTERESTING COMMENT CHAIN
+      ============================
+
+       All of this just from knowing a const 
+       is supposed to be a string and not a number? 
+       
+       It's next on my list to learn, I have 
+       just never had an issue with variable 
+       types coming out incorrect in my projects so I have 0
+        ambition to learn and I just keep 
+        avoiding it. Im assuming it's 
+        probably more useful for large teams though.
+
+        ==============================================================
+
+        REALLY GREAT REPLY TO THE ABOVE COMMENT
+
+        ===============================================================
+
+        No, much more than that. 
+        
+        Most projects need to use more 
+        than just strings and numbers. 
+        
+        Like if you use objects with user info,
+         you might have trouble remembering what
+          all the field names are, "was it id? or
+           userId?" or what other objects might
+            be nested in there etc. 
+            
+            "was it profile.name.first or profile.firstName?"
+            
+             You might miss some part of information 
+             in some object which would end up 
+             breaking something unexpectedly in another 
+             part of the app that you forgot about. 
+             
+             Instead of digging around the files
+              looking for what belongs in that object,
+               intellisense will tell you immediately, 
+               and warn you if anything goes wrong. 
+               
+               Also, you might forget that a function
+                needed 3 arguments and just give 
+                it two. 
+                
+                Intellisense and type-checking 
+                takes care of all of this. 
+                It makes sure that all your
+                 functions and data types
+                  fit snugly together,
+                   and 80% of the bugs 
+                   that you're used to dealing 
+                   with just magically dissapear. 
+                   
+                   (And I'm just talking from experience
+                    with completely solo projects. 
+                    It's an absolute game changer.)
+
+It's amazing how easily you can refactor
+ things when you make one change to a 
+ function or a type and you can instantly
+  see all the places that it will break 
+  things in your code. You adjust all those
+   places with the red squiggly lines, 
+   and voila, it all just works again.
+
+   ============================
+
+   If you work on stuff with more complicated data 
+   types it can be an absolute lifesaver. 
+   
+   And it's really nice when you have type 
+   
+   checking across all your files enabled. 
+   As your typing you immediately see any type errors show up, 
+   
+   rather than have to find and encounter them when it
+   
+    runs/tests "like any other error." I noticed that 
+    when your working with the type checking safety net
+    
+     it feels like a BIG part of the mental burden is 
+     
+     lifted, hence this meme. :-). Especially when 
+     working with 3rd party APIs or parts of your
+      codebases you haven't touched in a long time,
+      
+       it's so nice to know for sure what goes in where as you're typing.
