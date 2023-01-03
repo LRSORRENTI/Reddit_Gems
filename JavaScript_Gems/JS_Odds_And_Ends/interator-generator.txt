@@ -1,0 +1,269 @@
+=============
+QUESTION
+============
+
+Iterator/Generator Exercises?
+
+I'm comfortable with the syntax 
+of Iterators and Generators, and
+ understand how they work,
+  but I'm struggling to come 
+  up with examples of when they
+   should be used, and what
+    problems they are ideal to solve.
+
+Does anyone have any exercises
+ or katas where using iterators/generators
+  provide the best solution? I'd love to 
+  get some practice using them.
+
+  =======================
+  ANSWERS
+  =======================
+
+===========
+TOP COMMENT
+===========
+
+First of all, you don't have to know
+ a specific use case for a given feature. 
+ 
+ You know that it exists, know the syntax
+  and can write it - that's great.
+  
+   Maybe sometime in the future you 
+   will be working on some project,
+    and the good use case comes along
+     and instead of writing some half-baked 
+     custom solution you will connect
+      the dots and say "oh, the feature x
+       can be a good fit here".
+
+That said, you're in luck,
+ as I can give you a specific
+  use case from the library I'm working on.
+  
+   It's a desktop automation library 
+   (something like RobotJS or Nut.js). 
+   
+   I won't use the exact code, 
+   but a simplified version as an example.
+
+Let's say that you want to
+ allow the user to pragmatically 
+ move the mouse.
+ 
+  We have a function
+   (assume that we already 
+   have setMousePosition function):
+
+function moveMouse(path) {
+  for (const point of path) {
+    setMousePosition(point);
+  }
+}
+
+The simplest way to use 
+the function would be 
+to provide an array of points.
+
+ But as we want it to be smooth
+  movement, and not just
+   jumping from point a to a 
+   distant point b, we have
+    to provide all points in between. 
+    
+    Now, depending on the path you want
+     to use, it can be an awful lot
+      of points (or even an infinite
+       amount if the movement is cyclical).
+
+Now, we could use a function / class,
+ that lazily returns each step (point)
+  every time we ask for it, but
+   assuming that we still want 
+   the user to have an option
+    to provide a raw array of points,
+     we would have to handle each case
+      separately in our mouseMove 
+      function. Something like:
+
+function moveMouse(path) {
+  if (Array.isArray(path)) {
+    for (const point of path) {
+      mouse.setPosition(point);
+    }
+    return;
+  }
+
+  if (typeof path === "function") {
+    let point = path();
+
+    while (point !== null) {
+      mouse.setPosition(point);
+      point = path();
+    }
+    return;
+  }
+
+  if (path instanceof Path) {
+    // handle Path class usage
+  }
+}
+
+That's ugly and unnecessary,
+ as for..of loop can handle 
+ each case just fine if we use iterables,
+  i.e. if we create our paths as generators,
+   they can be substituted in place of an 
+   ordinary array in the for..of loop.
+    Code remains unchanged and relies on common, 
+    built-in interface (and the user can
+     even generate his own iterables).
+
+Ok, so now let's define a simple
+ generator function that yields 
+ the points on a straight line 
+ (don't focus on the implementation details):
+
+function* line({ start, end }) {
+  if (start.x === end.x && start.y === end.y) {
+    return
+  }
+
+  const deltaX = end.x - start.x
+  const deltaY = end.y - start.y
+  const steps = Math.max(Math.abs(deltaX), Math.abs(deltaY))
+
+  const incrementX = deltaX / steps
+  const incrementY = deltaY / steps
+
+  for (let i = 0; i <= steps; i++) {
+    yield {
+      x: start.x + Math.round(incrementX * i),
+      y: start.y + Math.round(incrementY * i),
+    }
+  }
+}
+Now we can use it instead
+ of an array in our moveMouse function:
+
+const myLine = line({
+  start: { x: 0, y: 0 },
+  end: { x: 1920, y: 1080 },
+});
+
+moveMouse(myLine);
+
+Great, but that's a simple generator,
+ when wold we use [Symbol.iterator]? 
+ 
+ let's consider a more complicated 
+ path like a polyline, that builds
+  the final path from user-defined
+   segments (there are other ways 
+   to do it, but the more complicated 
+   the path, the nicer it is to have
+    this type of builder presented below):
+
+Let's define a Polyline class:
+
+class Polyline {
+  #start;
+  #checkpoints = [];
+
+  constructor(start = { x: 0, y: 0 }) {
+    this.#start = start;
+  }
+
+  to(checkpoint) {
+    this.#checkpoints.push(checkpoint);
+    return this;
+  }
+
+  *[Symbol.iterator]() {
+    for (const checkpoint of this.#checkpoints) {
+      yield* line({ start: this.#start, end: checkpoint })
+
+      this.#start = checkpoint;
+    }
+  }
+}
+
+
+Now, equivalent to the previous
+ generator function, which result 
+ was iterable, the instance of 
+ the class is now iterable as well,
+  and can be used in place of
+   the ordinary array.
+
+Usage:
+
+const square = new Polyline({ x: 100, y: 100 })
+  .to({ x: 200, y: 100 })
+  .to({ x: 200, y: 200 })
+  .to({ x: 100, y: 200 })
+  .to({ x: 100, y: 100 });
+
+moveMouse(square);
+All handled by a simple:
+
+function moveMouse(path) {
+  for (const point of path) {
+    setMousePosition(point);
+  }
+}
+
+The other neat part is that
+ the user can predefine an 
+ arbitrary amount of paths,
+  and the points won't be 
+  generated until he/she 
+  actually uses it, 
+  and everything is memory-efficient.
+
+Oh, and you can still 
+extract the points into
+ an ordinary array with 
+ [...path] syntax (useful
+  for logging, serialization etc.).
+
+Other similar examples 
+could be animations, 
+custom data structures 
+like trees and graphs
+ (where you walk through 
+ the structure to search / perform 
+ some operations), combinatorics
+  and other use cases where the
+   number of steps can’t get
+    really big really fast.
+
+To sum it up, the major 
+use case for generators 
+/ object with [Symbol.iterator] 
+is that it transforms ordinary 
+function return values and object 
+instances into something that can
+ be often treated as an array
+  on the language level, with 
+  minimal memory footprint.
+
+
+
+===============
+ANOTHER REPLY
+================
+
+You should spend some time on youtube, search for 
+"tech with nader" and he has some good 
+content on them
+
+  They are one of the most advanced 
+  features in the JS language, 
+  because they allow very general 
+  coroutines and you can make
+   cooperating threads out of them,
+    which bring advantages over
+     doing everything with promises.

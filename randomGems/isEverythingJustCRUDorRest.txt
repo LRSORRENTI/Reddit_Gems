@@ -1,0 +1,143 @@
+
+=========================================
+QUESTION
+==========================================
+
+Is everything just a CRUD or REST app?
+
+I am genuinely asking. 
+At this point it seems
+ every time I look for something 
+ to build (im an app dev) 
+ it's just CRUD, 
+ REST or games. Is this it?
+
+ =========================================
+ ANSWERS
+ =========================================
+
+ TOP COMMENT ----
+
+     No, you can build:
+
+--  A webpage that doesn't
+ have a backend at all, 
+ it's just HTML and CSS
+
+-- A CLI application with no networking 
+at all, it just takes its input on stdin,
+ puts output to stdout, and maybe
+  does some stuff with files 
+  (or maybe not)
+
+-- Embedded programs for Arduino 
+/ MSP430 / Raspberry Pi Pico / ESP32
+
+--bClassical GUI desktop 
+application. Make UI's with
+ windows and buttons using 
+ the Win32 API, or whatever 
+ the modern equivalent is these days.
+
+-- Utilities: Everything from string
+ processing (grep / sed),
+  version control (git), 
+  backup software (rsync)
+
+--Networking: Figure out
+ how to send bytes over
+  the Internet with sockets,
+   then figure out how to
+    use that to make a
+     program running one
+      computer tell a 
+      program running on 
+      another computer 
+      to do something
+
+-- Graphics: Bootstrap from drawing 
+pixels on a framebuffer to
+ rolling your own code to 
+ draw lines, circles, 
+ filled polygons; 
+ eventually graduate to 3D
+  software rendering or raytracing
+
+-- Math: Complex numbers, 
+finding zeros of polynomials,
+ Bezier curves, fractals, 
+ using machine-word-size
+  integers to implement
+   arbitrary-size integers 
+   (and many other topics)
+
+-- Graphs and graph algorithms, 
+implement topological sorting or
+ finding shortest path
+
+-- Data structures in general: 
+Linked lists, binary trees,
+ heaps, basically in a 
+ data structures & algorithms textbook
+
+-- Cellular automata (Conway's game of
+ life is the classic example, 
+ but it's more like a simulation
+  than a game)
+
+-- Get into the depths of CS 
+theory and build a parser / 
+interpreter / compiler. 
+(Very challenging)
+
+-- Get into the electrical basis
+ of computers (nand2tetris 
+ or Ben Eater videos)
+
+-- Operating systems 
+(Very challenging, 
+xv6 is a decent place to start)
+
+This is what just comes to the
+ top of my head. Software 
+ is everywhere in 2023.
+
+
+ ======================
+ ANOTHER ANSWER
+ ======================
+
+    For 1 year I worked on system 
+    that passed sensor messages 
+    to a database using an async channel library.
+    
+     Ive also worked for a few months on a 
+     search utility backed by license libraries. 
+     
+     That’s the furthest I’ve ever gotten 
+     from crud/rest in 22 years.
+     
+      Yeah crud ops on domain 
+      objects is just very very common.
+       It pays the bills I guess.
+
+
+       ============================
+       ANOTHER ANSWER
+       ============================
+
+       Websockets, WebRTC,
+        and IoT come to mind 
+        as prominent web
+         technologies that 
+         don’t fall into the
+          categories you listed. 
+          
+          I could also start talking 
+          about AR/VR but that’s a
+           whole different conversation.
+
+           But there are other ways to make apps.
+            One can use Tprc for communicating 
+            with the server instead of REST.
+
