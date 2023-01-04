@@ -1,0 +1,143 @@
+====================================
+TOPIC  -- https://www.reddit.com/r/webdev/comments/101qjbq/wow_never_buy_a_us_domain_without_reading_this/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=10&utm_content=share_button
+====================================
+
+Wow NEVER buy a .us domain 
+without reading this first.
+
+===========================================
+
+I have registered a ton of domains 
+through namecheap. Never had any issues. 
+
+Maybe a week ago I registered a .us domain.
+ Apparently WHOIS domain anonymizing
+  doesn’t work for .us domain extensions. 
+  
+  I have received hundreds
+  and hundreds of calls 
+  to my personal cell, 
+as well as texts in the last two days. 
+
+No matter how good the domain is, 
+nothing is worth this interruption. 
+
+Going to try to get an IP phone number
+ in the meantime, if it isn’t too expensive, 
+ but I have a feeling my current number 
+ is now out in the ether forever,
+  and even updating Whois probably won’t help.
+
+Just a word of warning do not 
+even add personal contact info
+ unless you want to be interrupted 10 
+ times an hour.
+ 
+  Calls forwarded through US 
+  numbers all over the US, 
+  yet every caller is clearly from India. 
+  
+  I understand people are trying 
+  to make a living but this is
+   getting out of control.
+
+   ==========================
+   TOP COMMENT
+   ==========================
+
+It's not that anonymization doesn't work, 
+it's that having correct contact info
+ is a legal/government requirement.
+ 
+  The use of this ccTLD 
+  (county code top level domain) 
+  requires citizenship or a presence
+   in the US for foreign companies,
+    and that is essentially the reason 
+    for this (verification, in a sense).
+
+Supposedly there's random 
+verification done by registrars,
+ so giving inaccurate info may 
+ lead to consequences if it's randomly checked.
+
+ ====================
+ SECOND TOP COMMENT
+ ====================
+
+ I would never recommend you do this, 
+ but… you know you can just make that stuff up,
+  right?
+
+Put whatever you want in the WHOIS… 
+nobody will care. 
+
+Just make sure the email address
+ is accessible because if you want to
+  transfer the domain,
+   they will often email a transfer code to it.
+
+But the physical address 
+and the phone number? 
+If you were to just
+ make it up and put
+  anything you want there.
+
+   it’s not like the domain name 
+   police are going to come to 
+   your house and arrest you.
+    
+     ===========
+     RE to ABOVE
+     ===========
+          
+          why am I never smart on these things
+
+
+                  =============
+                  RE to ABOVE
+                  ==============
+                      
+                      .eu domains are the same
+                       thing and although 
+                       I'm not adventurous enough 
+                       to make stuff up I put 
+                       incomplete information 
+                       in case someone bothers
+                        me with it I can just
+                         claim it was a typo.
+
+                            Although I do know nobody
+                             cares, I am a bit paranoid 
+                             when it comes to this stuff.
+
+                                     ==============
+                                     RE TO ABOVE
+                                     ===============
+                                           
+                                            Huh? I have a .eu and it is 
+                                            anonymized. If I put it in 
+                                            whois all lines have a 
+                                            "REDACTED_FOR_PRIVACY" 
+                                            mention
+
+
+======================
+REPLY
+======================
+As an aside:
+
+I used to have a .cat domain 
+for my portfolio. 
+
+And, .cat requires your website
+ be available in the Catalan language. 
+ 
+ So I internationalized my whole website 
+ and offered it to be viewed in Catalan.
+ 
+  I have since discontinued the .cat domain 
+  and no longer offer my website in Catalan. 
+  
+  But it was an interesting fold in plans and
+   fun work.
