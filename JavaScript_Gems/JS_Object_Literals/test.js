@@ -1,7 +1,11 @@
 let greeting = {
     fullname: "Michael Jackson",
-    greet: (message, name) => {
-        console.log(message + " " + name + "!!");
+    getFullName: () => {
+        return this.fullname;
+   },
+    greet: (message) => {
+        console.log(message + " " + this.getFullName() 
+        + "!!");
     }
 }
 
@@ -9,4 +13,5 @@ let greeting = {
 //log fullname
 console.log(greeting.fullname);
 //call greet function
-greeting.greet("Greeting", greeting.fullname);
+greeting.greet();
+
