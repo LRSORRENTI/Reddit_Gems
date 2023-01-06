@@ -1,0 +1,302 @@
+
+=====================================================
+Other entry level roles instead of frontend/web dev?
+=====================================================
+
+Question:
+
+Like a lot of other people on this sub,
+ I’ve been applying with no luck.
+ 
+  200+ applications since October,
+   1 interview, and countless rejections.
+   
+    I really want to get started right 
+    away with a web dev job but doesn’t 
+    seem I will have luck anytime soon. 
+    
+    Are there any other entry level IT roles
+     I could get into to pave my way into web dev? 
+     
+     Are helpdesk/customer support/representative roles
+      a good way to start so I can eventually land
+       a web dev role along the way?
+
+       ==========================================================
+       Answers
+       ==========================================================
+============
+TOP COMMENT
+============
+
+       Look for quality roles: QE, QA, SDE, SDET. 
+       
+       These are whole complex fields on their own, 
+       that you can make a career in, 
+       but companies also often use them as 
+       an entry-level hire with the possibility 
+       of moving to developer.
+       
+        It's not a bad model - if you can learn
+         to properly test a code base then 
+         you'll be prepared to develop in it for sure.
+
+       ====================
+         RE to Top Comment
+       ====================
+
+        As someone who does automation engineering / SDET, sure.
+        
+         But there are some huge differences
+          in the type of work being done.
+          
+           And IMO QA work is very boring.
+           
+            Lots and lots of test cases to manage.
+
+           But yeah, it’ll get your foot in the door.
+
+           =================================================
+
+           SECOND TOP COMMENT
+
+           ==================================================
+
+            Hijacking! This is exactly what 
+            I did at my company! Went from sales
+             -> product support -> QA Engineer ->
+              and now they said I can start pulling
+               in dev tickets if I feel comfortable. 
+               
+               Most people I see in the online
+                learning community want to go from like,
+                 fast food worker -> software engineer.
+                 
+                  That’s possible, but really hard
+                   if you can’t dedicate months/years
+                    to just educating yourself. 
+                    
+                    If you want to work in the meantime 
+                    while you learn, my path above would work great!
+
+
+                    =========================================
+                    COMMENT 
+                    =========================================
+
+                    I don’t really agree with this sentiment.
+                    
+                     Truth is most of the CS majors I work
+                      with know just about as much as a 3
+                       month coding boot camp graduate.
+                       
+                        The real difference is just how big their ego is.
+                        
+                         Reality is the tech industry is desperate 
+                         for people. 
+                         
+                         If you can deal with the stress
+                          of never knowing the “right” 
+                          answer to whatever problem that is
+                           assigned to you and like to read books about 
+                           abstract concepts then come join the party. 
+                           
+                           Just make sure you are honest about your 
+                           abilities.
+
+                          P.s. ask for lots of money
+
+
+                          =======================
+                          Next Top Comment
+                          =======================
+
+                          I re-post this every once in a while if I
+                           think there's a possibility it might be relevant.
+                           
+                            Might not be here, but hopefully it
+                             could be useful to someone reading it...
+
+My success rate with getting jobs through ads, 
+recruiters or job sites is 0%.
+
+ I've applied to lots over the years, 
+ and never got any of them, or was offered the
+  job but then decided I didn't want to work
+   there for whatever reason.
+
+100% of my employment and
+ contract work has come through either:
+
+Word of mouth.
+
+Randomly bulk emailing companies
+ in my industries - regardless of 
+ whether they were looking for people or not.
+
+More often than not, the jobs I got never
+ even got to the point of them putting a
+  job ad up to begin with - because I 
+  randomly popped up in their inbox at
+   the right time, and was good enough
+    for them not to bother wasting any more
+     time filling their gap.
+     
+      Some of them weren't even at
+       the point of creating a new position to fill yet,
+        but they needed to get some project done, 
+        and there I was, I just fell into their
+         lap at the right time.
+
+The shotgun approach is not only good for
+ the bulk numbers (in a very short amount of time),
+  but getting in early before the competition does. 
+  
+  It also shows a little bit of initiative.
+   Most of these managers/clients have been 
+   too busy to get to the job ad and interviewing process etc.
+   
+    You could be saving them work that
+     they didn't want to do. Very few are going
+      to be annoyed and consider this as actual "spam" -
+       as long as you write your message in the format
+        of a regular email you would send 
+        applying for jobs... not some flashy/annoying marketing spiel.
+
+By the time their job ad is posted, they've probably 
+also already started talking to candidates that have
+ come in through word of mouth. 
+ 
+ People replying to the ads are 
+ probably the last ones in the door to get interviewed.
+
+How to do:
+
+Spend a few days browsing the web for 
+companies you might be relevant to, 
+and collect their email addresses or 
+contact form URLs if there is no email address shown.
+
+ At least 50, maybe 100 or more if you can find them.
+  Even if the company isn't totally relevant to you,
+   they might pass you on to someone they know -
+    this bit is important to consider.
+
+Write up a generic email to them all basically saying
+ "hello I'm looking for work they may be relevant to your company,
+  here's my relevant skills to your industry". 
+  
+  Attach your resume.
+
+   Make sure you send each email separately,
+    i.e. one TO recipient for every contact.
+     i.e. Don't put multiple recipients on the TO/CC/BCC lines.
+
+For the web forms, just copy and paste your
+ generic email in, maybe with a web link to your resume.
+
+Important: ask for referrals
+
+In the initial email you send 
+(don't expect them to respond first),
+ it's also worth asking them to pass your details
+  on to anyone else / other companies they
+   know who might need someone like you. 
+   
+   This has worked for me multiple times,
+    and in most cases they never would have 
+    thought to forward me on to someone else 
+    unless I specifically mentioned it in that initial email.
+
+In closing:
+
+If you contact 100 companies (without even any pass-ons)
+ and have a 1% success rate, then you might have
+  a new job within a week... 
+  
+  especially if they're not actually
+   formally advertising/interviewing etc 
+   - very common in smaller companies.
+
+You might even get a job you like that
+ you didn't consider applying for. 
+ 
+ The first job I ever got I used this
+  process above looking for IT work, 
+  but got a sweet video editing / audio recording 
+  AV job at a university, purely from some stuff 
+  I had listed in my "hobbies" section on my resume.
+
+Formal job applications are 100% expectations-based
+ from both sides. But opportunities often
+  come when you least expect them.
+
+Also there's the fact that when jobs are going
+ through recruitment companies, they take a big
+  fee from the employer (out of your
+   on-going wage too sometimes)...
+   
+    employers would much rather not have
+     to pay this fee, so candidates
+      coming in directly have another advantage here.
+
+===============
+Next Comment
+===============
+
+In my experience, 
+companies tend to hire
+ less during the last 
+ quarter of the year.
+
+200 applications isn’t
+ really that much in 
+ the grand scheme of things
+  for a junior position. 
+  
+  I found my first job after
+   sending out about 150
+    applications but that
+     was 6 years ago when
+      the demand for juniors
+       was much higher than 
+       it is now.
+       
+        My old roommate last year 
+        sent out nearly 500 applications 
+        over 8 months before finding his 
+        first software engineering role. 
+        
+        He wasn’t the strongest interviewer
+         so that made it difficult, but 
+         times are hard for people trying
+          to break into the field.
+
+Don’t settle for a shittier position
+ unless you absolutely need a job 
+ right now. 
+ 
+ My current roommate is a software
+  development engineer in test (SDET)
+   because that was the first
+    engineering job he could get,
+     and now he’s pigeonholed in
+      positions that pay a lot less
+       than normal front or backend 
+       engineering. Same goes for other 
+       IT jobs… there’s really not much 
+       room for lateral movement 
+       from those positions.
+       
+        If you absolutely must work
+         right now than it’s definitely
+          better than a non-technical role, 
+          but I would suggest you keep working
+           on your interviewing skills and keep
+            applying to junior software developer positions.
+
+            I started as a manual QA tester,
+             moved into developing automated tests,
+              then moved into Front-end.
+
+Definitely look at QA, I'd say.

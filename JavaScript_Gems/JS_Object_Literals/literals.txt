@@ -1,0 +1,67 @@
+
+========================================
+Object Literals in JavaScript
+
+These come up in interviews more than you think
+================================================
+
+Object literals often come up in 
+web development interviews, let's explore them!
+
+===============================================
+
+WHAT IS AN OBJECT LITERAL?
+
+==================================================
+
+In simplest terms an object literal is 
+a comma-separated key-value pairs inside 
+of curly brackets
+
+They can be properties and functions, here's 
+an example:
+
+let greeting = {
+    fullname: "Michael Jackson",
+    greet: (message, name) => {
+        console.log(message + " " + name + "!!");
+    }
+};
+greeting.greet("Hi", "Luke")
+greeting.greet("Hi", "Luke")
+greeting.greet("Hi", greeting.fullname)
+
+// "H Luke!!"
+// "Hi Luke!!"
+// "Hi Michael Jackson!!"
+
+If we wanted to get access to the fullname
+inside the function in our object, we need to 
+create a function to access that value 
+using the 'this' keyword 
+
+Because if we did something like:
+
+ greet = (message)=> {
+     console.log(message + " " + fullname + "!!");
+}
+
+We will get an undefined error. 
+The fullname property isn’t visible directly, so 
+let's create that function using 'this' to gain access
+
+getFullName: () => {
+    return this.fullname;
+}
+
+So now our object looks like: 
+
+let greeting = {
+    fullname: "Michael Jackson",
+    getFullName: () => {
+        return this.fullname
+    },
+    greet: (message) => {
+        console.log(message + " " + this.getFullName() + "!!");
+    }
+};
