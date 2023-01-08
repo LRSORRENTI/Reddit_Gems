@@ -1,0 +1,77 @@
+=========
+QUESTION
+==========
+
+What is the most efficient way to use 
+CSS/SCSS in your project?
+
+I always have to scroll through 
+the css file to the class I want
+ to update or create. 
+ 
+ Is there an extension or a
+  tool that would help me
+   be more organized in 
+   terms of style? 
+   
+   For example by clicking on the
+    className in the project
+     it pops up the stylesheet
+      on the side for me to update easily?
+
+      ====================================
+
+      ANSWERS 
+      =============================
+
+     One SCSS file per component. 
+     
+     And use CSS Modules so you can import
+      the classes into your JS file. 
+      
+      That way you don't need to worry 
+      about name conflicts between components. 
+      
+      You can truly treat the styles as 
+      isolated for each component. 
+
+      ==================================
+
+      Use CSS Modules
+
+Example: stylename.module.css
+
+NB: It creates a class with 
+the given className with a
+ random string attached to it.
+ 
+  This makes it possible to use 
+  the same classNames in different 
+  components/pages/files
+
+=========================================
+
+SCSS modules get my preference.
+
+I use the SCSS part to rest 
+elements that belong to my component. 
+
+The fewer elements, the better.
+
+ I'd rarely nest anything deeper
+  than three layers.
+
+Keep it simple, and let
+ CSS shine where it's best:
+  in the browser.
+  
+   Use media queries and use CSS variables.
+
+For example by clicking 
+on the className in the
+ project it pops up the stylesheet
+  on the side for me to update easily?
+
+Cmd + B in WebStorm 
+(when focussed on
+ className={styles.MyComponent} (the MyComponent part) brings me to the correct SCSS module immediately, and the correct line.

@@ -1,0 +1,129 @@
+
+===================================
+TITLE
+===================================
+
+I’m learning react, but I don’t know how.
+Needs Help
+Hello everyone, 
+I started learning react , 
+but just reading doesn’t help me.
+
+ I’ve done the 30daysReact but
+  still I can’t understand how to combine them.
+
+I’ve done a bootcamp but it 
+focused on other things.
+
+ After that I decided to take
+  the Frontend path. It’s more to my likings.
+
+Is there something that you suggest doing?
+
+Im in the process to create 
+a personal website but there 
+is so much information out there 
+I’m feeling overwhelmed.
+
+What do you think?
+
+Edit: I just want to thank 
+everybody for the comments! You helped a lot! 
+
+================================================================================
+ANSWERS
+=================================================
+
+=======
+TC
+=======
+
+Start by reading the new React beta docs site:
+
+https://beta.reactjs.org
+
+We've also got a good list of learning resources here:
+
+https://www.reactiflux.com/learning
+
+======================================================
+ RE to above 
+  =======
+        Second Reactiflux,
+         the Discord is top 
+         tier and if you put effort 
+         into your questions,
+          you’ll get a lot of very 
+          qualified folks who are 
+          eager to put in the matched 
+          effort to help out.
+
+          ==================================
+
+          For understanding individual topics 
+          I've found web dev simplified on 
+          YouTube to be very helpful.
+          
+           Mainly you just need to start very small.
+            Understanding how jsx and components
+             render is a huge part of it.
+
+Also just a heads up. Class-based 
+react is basically obsolete. 
+
+Always look for newer functional 
+react info if you're getting help.
+
+ In other words if you see the word "class"
+  in component declarations, look elsewhere.
+
+  ==============================
+   RE to above 
+   ========================
+   I dunno man, understanding classes 
+   nowadays can still teach you quite
+    a bit about component lifecycle 
+    and the render loop. 
+    
+    Classes in React are
+     IMHO like prototypes in JavaScript.
+     
+      Not actively used in most places, 
+      but understanding them is incredibly 
+      helpful in many scenarios to better 
+      understand why things work the way they do.
+
+==============================================
+ RE to above 
+ ==================
+ This is also what I've come to 
+ understand about Class Components. 
+ 
+ Not to mention some features like
+  Error Boundaries require the use 
+  of Class Components.
+
+According to the docs:
+
+The componentDidCatch()
+ method works like a 
+ JavaScript catch {} block,
+  but for components. Only class 
+  components can be error boundaries.
+  
+   In practice, most of the time you’ll
+    want to declare an error boundary
+     component once and use it throughout
+      your application.
+
+      ==============================
+
+      Codevolution on YouTube gives one of the best tutorials I've seen in ages
+
+      ===========================================
+
+      Google to find and study public github repos. 
+      Download projects and run them. 
+      Tinker with stuff. Break things. Fix them.
+
+      ===================================================
