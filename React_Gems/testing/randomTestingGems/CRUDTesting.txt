@@ -1,0 +1,175 @@
+======================
+QUESTION 
+=======================
+
+For simple CRUD apps,
+ where do unit tests fit in?
+
+ ===============================
+
+ At work we have a relatively 
+ straightforward CRUD site,
+  written in React. 
+  
+  The whole site is mostly forms, 
+  tables and some charts.
+
+I'm trying to move our company
+ culture in a more test-friendly direction. 
+ 
+ Right now the development mindset 
+ is very fast and loose: get it barely working,
+  throw it up on production,
+   and wait for the users to submit 
+   bug tickets (it's an internal tool,
+    so our coworkers often get pretty
+     annoyed with us).
+
+Nobody writes any tests ever, 
+so nobody has been able to 
+teach me about good testing practices in React.
+
+ I've messed around with jest,
+  react-testing-library, and playwright,
+   but honestly I can't really 
+   find good uses for jest and 
+   react-testing-library.
+
+Most components either seem 
+too complex (big forms with
+ autosave that rely on frequent,
+  successful API calls) or 
+  too simple (a bar chart) 
+  to test with jest + RTL.
+
+We do use storybook at work, 
+and I'm having a hard time 
+figuring out where jest + RTL 
+fit in between storybook and playwright. 
+
+I can use storybook to make sure that 
+simple components look how I want
+ to them to look when I give them 
+ good/bad/incomplete data.
+ 
+  I can use playwright to make 
+  sure that big components with
+   lots of API calls are functioning properly.
+
+Do unit tests just not have a
+ place in the front end of a simple, 
+CRUD-heavy app?
+
+=========================================
+
+TOP COMMENT
+
+====================
+
+Most components either seem too complex
+
+This is where your problem lies.
+
+ If your components seem impossible
+  to properly test, they have too 
+  many business rules and too many
+   responsibilities. 
+   
+   From a pragmatic standpoint,
+    I don't have a good solution. 
+    
+    A team with no existing 
+    testing culture is going to
+     hate testing too much if 
+     they're suddenly thrown 
+     into [borderline] insurmountable
+      testing challenges.
+
+My recommendation would be to
+ start with better code quality 
+ and a healthier culture for component design.
+ 
+  It is much easier to advocate for 
+  testing after that happens. 
+  
+  Well-designed code/components
+   are typically easier to test. 
+   
+   The learning and adjustment 
+   curve will be more gentle
+
+   ==================
+   OP REPLY TO ABOVE
+   ==================
+
+   Thanks for the input! 
+   
+   I definitely agree that a 
+   culture change is needed foremost,
+    but it's been hard to motivate everybody else.
+    
+     My new strategy is to figure out
+      some good testing practices on my own,
+       and get them implemented into the 
+       codebase so my coworkers have some 
+       solid examples to use as reference.
+
+For making components more testable/reducing
+ component complexity: how would your
+  recommend reworking big components 
+  that rely on many API calls?
+
+From what I've gathered, there are
+ a few different techniques:
+
+The components that actually do 
+the API call should have it
+ passed down to them as a function 
+ via props or something. 
+ 
+ That way I can run tests on 
+ the component itself to make
+  sure it calls the API caller
+   function, without actually
+    needing to hit the API
+
+Use MSW to mock API calls 
+for larger components.
+
+ That way I can test a whole 
+ complicated form without needing 
+ to reorganize components
+
+From what I've read, #1 seems
+ like the more "best-practices"-ish 
+ solution. But in practice, 
+ we have a lot of weird wrappers 
+ around formik that kinda make 
+ it hard to reorganize logic around forms.
+ 
+  Which is definitely a problem,
+   but idk if it's one I can fix anytime soon
+
+   =================
+   REPLY TO ABOVE
+   ================
+   The most popular technique 
+   is one you didn't mention, custom hooks.
+
+You can take out many lines of 
+state manipulation and useEffects
+ and replace them with just one line:
+
+const { data, isLoading, isError } = useQuery('/some/route')
+
+This is surprisingly easy 
+to implement yourself with a 
+custom hook, feel free to try it,
+ or just go straight to using a 
+ library that will implement
+  additional features that you
+   should almost definitely need,
+    like caching and localStorage persistence.
+    
+     Here's a comparison table for those 
+     kinds of data fetching libraries.

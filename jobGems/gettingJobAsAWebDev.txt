@@ -1,0 +1,248 @@
+
+=================================================
+How are you supposed to start if 
+nobody wants to hire new developers?
+
+https://www.reddit.com/r/webdev/comments/106tp1s/how_are_you_supposed_to_start_if_nobody_wants_to/?utm_source=share&utm_medium=android_app&utm_name=androidcss&utm_term=10&utm_content=share_button
+==================================================
+
+==========
+QUESTION
+==========
+
+I think I may have to give 
+up on this whole thing because 
+I feel like I'm wasting my time and money.
+
+ I've spent hundreds of dollars in a 
+ coding bootcamp that taught me a lot. 
+ 
+ HTML, CSS, Javascript, React and all of
+  its advanced features, and even a
+   short design course.
+   
+    On top of this I already knew the
+     basics of Javascript and HTML & CSS
+      since I was in high school.
+
+I can build basic web apps.
+ I have built 3 projects so far that 
+ I'm proud of. They don't look fancy,
+  but they do have a UI and they work.
+  
+   So far I've built a recipe search engine,
+    a movie recommendation app that uses
+     the OpenAI API and the OMDb API,
+      and a todo app. 
+      
+      These apps are all built in react 
+      and one uses Tailwind CSS.
+
+When I go to sites like Indeed or 
+Glassdoor, everyone is looking for 
+Senior Web Developers with like 4+
+ years of experience in a professional setting. 
+ 
+ How am I supposed to enter this field if no one 
+ is looking for a new developer? 
+ 
+ Do I have to lie and say I have experience? 
+ 
+ Is this how everyone makes it in? 
+ 
+ Is this field really that over saturated?
+
+I have no degree. I did two years 
+of computer science and it just wasn't for me.
+ Didn't learn anything useful, and the cost was
+  ridiculous, so I thought that web development 
+  would be my thing.
+  
+   I enjoy it a lot, and I always hear how 
+   employers don't care if you have a degree
+    or not as long as you can show them you
+     know how to solve problems.
+
+Maybe I'm just not that good,
+ but I'm beginning to think that that was a lie.
+
+If I have no professional experience
+ and no degree, how do I make it? 
+ 
+ I'd be happy with a minimum wage job to start.
+ 
+  Just anything that can say "hey, you are
+   working as a web developer now."
+
+If you guys have any tips or if I'm
+ missing something crucial please let me know.
+ 
+  My passion really is building apps, 
+  but if I cannot land any sort of job
+   I'd have no other choice but to start
+    working in the factory where
+     a lot of family works in.
+     
+      I'm not looking forward to sorting
+       boxes and blender parts...
+
+       ========================================
+
+       ============
+       TOP COMMENT
+       =============
+
+       You have to apply for tons of positions.
+       
+        Search linkedin, google, dice.
+        
+         I also have no degree, I got started 
+         at a smaller company.
+
+Practice interviewing and make 
+sure your resume is done well;
+ 1 page, lists technologies you're familiar
+  with bulletpoints right up top.
+  
+   All your contact info, phone #,
+    email, address, github, linkedin.
+
+If you don't have one create a linkedin 
+profile and fill it out, treat it like
+ a professional facebook, recruiters 
+ might reach out.
+ 
+  Even if they don't it's a link you 
+  can put on your resume.
+
+You have React experience, 
+I'd look for React developer 
+positions and Javascript developer 
+positions; and apply to at least 5 a day.
+
+ Getting this first job is going to be 
+ the hardest but you absolutely can do it.
+
+Have a folder with: A master resume, 
+list of 3 references, 
+cover letter template. 
+
+Each position you're going for read the posting,
+ copy your master resume and edit 
+ to include any info from the posting
+  into your skills/abilities, 
+  claiming any knowledge you possibly can
+   (be honest but also generous to yourself). 
+   
+   Edit your master cover letter so that 
+   it's an introduction about you and why
+    you'd be good at this job.
+    
+     Include as much of the job
+      posting as you can, if it 
+      mentions Vue write that you are 
+      interested in Vue and 
+      have experience in React. 
+      
+      Talk about why you want to 
+      work in this field; what about this
+       position excited you?
+
+Apply to positions where
+ you meet 60%+ of the required skills.
+ 
+  Don't apply for senior dev positions
+   obviously, but also don't only apply
+    if it says "Junior". 
+    
+    It might have been written by 
+    someone who doesn't know what 
+    that department wants and isn'
+     familiar with the real requirements. 
+     
+     Also what's the worst thing that'll happen?
+      You didn't get an interview? 
+
+      If you don't apply you definitely
+       won't get an interview,
+        and you sent out 4 others just today.
+        
+         Take a shot.
+
+If you get the interview
+ that's great!
+ 
+  Wear a tie, 
+ clean background if it's video chat,
+  and send a thank you note to whoever 
+  interviewed you a few days after the interview. 
+  
+  Just a quick "Thanks for taking some time to 
+  speak with me, I'm very interested in the
+   position and please email me if I can
+    provide any additional detail that 
+    will help you make a decision."
+
+Good luck!
+
+===================
+RE to above comment
+===================
+
+One hundred on all of this, 
+with the exception of 'Junior'
+ in the posting title.
+ 
+  I applied to about 150 positions
+   total (including 'bulk' quick-apply 
+   requisitions) over about 
+   three months focusing on junior/entry level, 
+   and landed my first job with a medium 
+   sized tech company as a junior 
+   from my well-curated LinkedIn profile. 
+   
+   This was important to me- I need a mentor,
+    and the understanding that learning is the goal.
+
+It also told me thar the team hiring me 
+shared my ethics around this very problem. 
+
+If you have more than a few hundred devs 
+and you dont hire juniors, you're greedy.
+
+It is such a frustrating situation. 
+I hope that hard working curious 
+people dont give up while waiting 
+for the inevitable bubble pop that 
+will happen when firms start
+ needing many more affordable developers.
+
+==================
+Reply
+==============
+
+LinkedIn, and build up a network
+ of recruiters. Some companies 
+ only use recruiters.
+ 
+  They don't even have the
+   jobs on Indeed (and in my
+    experience Indeed just has
+     spammy ads and IT jobs anyway. 
+     IT as in support, not development.) 
+     
+     For me, the developer network is on LinkedIn.
+
+Also go to any related events in
+ your area. 
+ 
+ Mine has all kinds of Python meetups,
+  JS meetups, UX meetups, Ruby, 
+  Web Developers, Full Stack Developers, 
+  the Front-End developers... all the names, 
+  all similar people, you start to recognise 
+  them and shake hands and before you know it,
+   someone knows of an opening.
+
+It's a lot harder in the US these days, 
+tis true. But definitely not impossible.
