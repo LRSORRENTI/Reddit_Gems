@@ -1,0 +1,21 @@
+================
+POST 
+================
+
+console.log / border 1 px solid red 
+
+====================================
+
+Use outline: instead of border:
+
+ for better results!
+
+ Outline won't contribute to sizing
+
+ ========================================
+
+ I do outline: 2px dotted red
+ 
+  because outline doesn't change 
+  
+ flow and nothing ever uses dotted
