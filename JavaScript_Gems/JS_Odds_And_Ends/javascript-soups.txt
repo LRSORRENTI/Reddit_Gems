@@ -1,0 +1,203 @@
+
+========================
+QUESTION
+========================
+
+How do you make sense of the JavaScript soups?
+
+==========
+
+Most web-applications I happen to work 
+upon involve large bocks of "javascript soups" 
+most of them typically jquery functions 
+doing some kind of DOM manipulation.
+
+ Below is just one sample data point,
+  but this is across thousands of 
+  lines of code in multiple web pages:
+
+$("#btnSetLocationCompat").click(function(){
+	console.log("#btnSetLocationCompat_click..");
+	var id = $("#cboLocationCompat").val();
+	if (id==null) return;
+	if ($(".location-compat-row[data-id='"+id+"']").length > 0) {
+		alert("Compat record already exists for this location.");
+		return;
+	}
+	$.post("/home/set_compat", {
+		mode: 'loc',comp:'n',
+		'emp_id': $("#id").val(), 'loc_id': id
+	}, function(data){
+		//console.log("RESP:", data, (typeof data));
+		//data  =JSON.parse(data);
+		al = {
+			'type':(data.status=='success'?'info':'danger'),
+			'message': data.message,
+		};
+		addLocationCompatRow(id, $("#cboLocationCompat option:selected").text(), 'n');
+		flashAlert(al);
+	});	
+});
+
+I also know that the most popular
+ advice I'm going to get is to 
+ learn react and build in react!
+ 
+  I also have a feeling that it
+   might improve things to an extent.
+
+But having said that, don't
+ you think this problem is 
+ inherently about web-development
+  itself being confusing and unstructured, 
+  things like jquery and react are
+   just band-aid solutions to it? 
+   
+   
+   When I used to do desktop development in .NET 
+   or even NetBeans, there was a very clear
+    and structured way. 
+    
+    I knew this is when my form 
+    is going to load and Form_Load() is where I
+     have to write the loading event code. 
+     
+     Similarly someButton_Click() is where I do
+      click event handling of a button.
+
+But with JavaScript, there isn't just one
+ place where code is written. I have app.js 
+ where I have basic initialization routines 
+ and common utility functions.
+ 
+  And then there are internal <script> blocks
+   on each page pertaining to that page/module
+    functionatliy, etc. 
+    
+    The problem here is that when something
+     goes wrong, debugging is just so difficult
+      in JS! The old way of debugging by
+       printing vars (console.log) is the 
+       only way of debugging. 
+       
+       You can't put exact breakpoints at some place,
+        can you?
+
+What is your way of handling this?
+ Have you just resigned yourself 
+ to this inherent soupiness and vagueness,
+  or have you tried to improve the process
+   in some way? Is there no such thing as 
+   "industry standard" or "best practice"
+    in this regard?
+
+    ======================================
+    ANSWERS
+    =========================================
+
+    ====
+    TopCOMMENT
+    ============
+
+    comes down to the developer, 
+    I always say: 
+    
+    a good operator doesn't blame his tools.
+
+In your example above, 
+I'd be putting the post 
+into a function and just
+ pass some variables into it, 
+ and have it behave in a standardized manner. 
+ 
+ It should make that function re-usable 
+ for other instances where you're doing
+  something extremely similar. 
+  
+  It might take a hot minute to work out
+   how to bring some sort of standardisation 
+   into your code, but it makes debugging a breeze.
+
+   ==================
+
+   A couple of things I do that works
+    well for me are:
+
+Separate the binding of 
+events from the the event logic. 
+
+So I have code like:
+
+$(function() { 
+    BindEvents();
+});
+
+function BindEvents() {
+    $('#whatever').on('click', OnClickWhatever);
+}
+
+function OnClickWhatever() {
+    // do the work here
+}
+This gives me one common location where 
+all events are bound. After the page is 
+loaded no additional events are bound 
+(hello "on" and matching on parent elements).
+
+The second thing I do is for handling 
+"reactivity". User clicks a checkbox, 
+for example, and something is shown or
+ hidden. 
+ 
+ I use one common routine that examines 
+ the application/page state and shows/hides
+  what ever. For example:
+
+$(function() { 
+    BindEvents();
+
+    // initialize page UI
+    SetUi(); 
+});
+
+function BindEvents() {
+    $('#whatever').on('click', OnClickWhatever);
+}
+
+function OnClickWhatever() {
+    // do the work here
+
+    // state changed so update the ui to 
+    reflect current state
+    SetUi();
+}
+
+function SetUi() {
+    if ($('#somecheckbox').prop('checked)) {
+        $('message').hide();
+    }
+    else {
+        $('message').show();
+    }
+}
+In SetUi() I try not to get too clever... 
+I want it dumb/simple to understand and reason about.
+
+All that stuffing code into method 
+arguments just makes things difficult during
+ maintenance. If it's more than a few lines... 
+ which it almost always is. 
+ 
+ Same for your $.post data parameters... 
+use a dang variable... 
+
+keep your $.post small and clean and obvious.
+
+==============================================
+
+It's extremely important to understand two
+ things really well to start navigating this:
+
+javascript execution context
+
+anonymous functions and callbacks
