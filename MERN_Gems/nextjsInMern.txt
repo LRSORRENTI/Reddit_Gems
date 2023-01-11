@@ -1,0 +1,28 @@
+=================================================
+How does Next.js benefit a MERN project?
+=================================================
+
+I’ve been learning the MERN stack 
+and wanted to use the server side 
+strengths of Next,
+ is there something negative
+  I’m not aware of?
+  
+   In terms of compatibility
+    with the original stack.
+
+    ==========================================
+
+    TOP COMMENT 
+    =============
+
+    No negative impacts, 
+    as it’s just React with 
+    sugar on top to make it 
+    easy to do things like routing,
+     SSR, etc. There’s nothing that
+      you won’t be able to do with 
+      Next in your MERN stack that 
+      you couldn’t do using just React.
+
+      =====================================
